@@ -13,6 +13,7 @@ html {
 body {
   min-height: 100vh;
   position: relative;
+  background-color: #393939;
   margin: 0;
   font-size: 1.5rem;
   line-height: 2;
