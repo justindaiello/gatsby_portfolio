@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Site",
+    title: 'Gatsby Site',
   },
   plugins: [
     {
@@ -17,7 +17,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         commonmark: true,
         footnotes: true,
@@ -25,7 +25,7 @@ module.exports = {
         gfm: true,
         plugins: [
           {
-            resolve: "gatsby-remark-embed-video",
+            resolve: 'gatsby-remark-embed-video',
             options: {
               width: 800,
               ratio: 1.77,
@@ -34,7 +34,7 @@ module.exports = {
               noIframeBorder: true,
               urlOverrides: [
                 {
-                  id: "youtube",
+                  id: 'youtube',
                   embedURL: videoId =>
                     `https://www.youtube-nocookie.com/embed/${videoId}`,
                 },
@@ -45,10 +45,10 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-sharp",
+      resolve: 'gatsby-plugin-sharp',
     },
     {
-      resolve: "gatsby-transformer-sharp",
+      resolve: 'gatsby-transformer-sharp',
     },
     {
       resolve: `gatsby-source-instagram`,
@@ -56,5 +56,13 @@ module.exports = {
         username: `puppystagrams`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Oxygen'],
+        },
+      },
+    },
   ],
-}
+};
