@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -8,7 +7,7 @@ const StyledHeader = styled.header`
   padding: 2rem;
 `;
 
-const StyledLink = styled(Link)`
+const StyledButton = styled.button`
   text-decoration: none;
   color: ${(props) => props.theme.text};
   padding: 0rem 3rem;
@@ -17,6 +16,8 @@ const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   position: relative;
+  background: transparent;
+  border: none;
 
   &:before {
     content: '';
@@ -55,4 +56,4 @@ const StyledLink = styled(Link)`
   }
 `;
 
-export { StyledHeader, StyledLink };
+export { StyledHeader, StyledButton };

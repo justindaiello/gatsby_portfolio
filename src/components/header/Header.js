@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyledHeader, StyledLink } from './HeaderStyles';
+import { StyledHeader, StyledButton } from './HeaderStyles';
 
 const Header = () => {
   return (
     <StyledHeader>
-      <StyledLink to="#">About</StyledLink>
-      <StyledLink to="work">Work</StyledLink>
+      <StyledButton>About</StyledButton>
+      <StyledButton>Work</StyledButton>
     </StyledHeader>
   );
 };
