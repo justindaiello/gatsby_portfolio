@@ -3,6 +3,6 @@ import PrimaryLayout from '../layouts/PrimaryLayout';
 
 export default () => (
   <PrimaryLayout>
-    <div>this will be the home page eventually</div>
+    <div>super cool content goes here</div>
   </PrimaryLayout>
 );
