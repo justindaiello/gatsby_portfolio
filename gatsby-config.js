@@ -23,11 +23,14 @@ module.exports = {
       resolve: 'gatsby-transformer-sharp',
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        google: {
-          families: ['Oxygen'],
-        },
+        fonts: [
+          {
+            family: 'Oxygen',
+            variants: ['300', '400'],
+          },
+        ],
       },
     },
   ],
