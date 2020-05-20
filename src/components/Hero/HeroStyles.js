@@ -18,6 +18,7 @@ const StyledHero = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: ${(props) => props.theme.text};
 
   h1 {
     margin-bottom: 2rem;

@@ -1,6 +1,6 @@
 const lightTheme = {
   text: '#333',
-  body: '#f9f9f8',
+  body: '#F9F9F8',
   accent: '#87B3C7',
 };
 
