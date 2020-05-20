@@ -1,8 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: 'Justin Aiello',
+    title: `Justin Aiello`,
+    description: `Software Engineer | Asheville, NC`,
+    author: `Justin Aiello`,
+    siteUrl: 'https://www.justinaiello.com',
+    keywords: ['justin aiello', 'software engineer', 'react', 'javascript'],
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,6 +36,22 @@ module.exports = {
             variants: ['300', '400'],
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: './src/images/favicon.png',
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          yandex: false,
+          windows: false,
+        },
       },
     },
   ],

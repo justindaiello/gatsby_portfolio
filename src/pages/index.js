@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SEO from '../components/SEO/SEO';
 import Hero from '../components/Hero';
 import Header from '../components/Header';
 import PrimaryLayout from '../layouts/PrimaryLayout';
@@ -9,6 +10,7 @@ export default () => {
 
   return (
     <PrimaryLayout>
+      <SEO title="Asheville, NC" />
       <Header setIsHidden={setIsHidden} isHidden={isHidden} />
       <Hero isHidden={isHidden} />
     </PrimaryLayout>
