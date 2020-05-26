@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
+  position: fixed;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -8,7 +9,6 @@ const StyledHeader = styled.header`
 `;
 
 const StyledButton = styled.button`
-  text-decoration: none;
   color: ${(props) => props.theme.text};
   padding: 0rem 3rem;
   text-transform: uppercase;

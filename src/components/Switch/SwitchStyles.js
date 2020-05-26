@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledSwitch = styled.button`
-  position: absolute;
+  position: fixed;
   right: 6rem;
   top: 2rem;
   display: inline-block;
@@ -10,6 +10,7 @@ const StyledSwitch = styled.button`
   border: none;
   ${(props) => (props.isOn ? `background: #393939` : `background: #F9F9F8`)};
   border-radius: 19px;
+  z-index: 99;
 
   &:after {
     content: '';
