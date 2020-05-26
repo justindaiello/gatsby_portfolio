@@ -8,13 +8,18 @@ import PrimaryLayout from '../layouts/PrimaryLayout';
 
 export default () => {
   const [isHidden, setIsHidden] = React.useState(true);
+  const projectRef = React.useRef(null);
 
   return (
     <PrimaryLayout>
       <SEO title="Asheville, NC" />
-      <Header setIsHidden={setIsHidden} isHidden={isHidden} />
+      <Header
+        setIsHidden={setIsHidden}
+        isHidden={isHidden}
+        projectRef={projectRef}
+      />
       <Hero isHidden={isHidden} />
-      <Projects />
+      <Projects projectRef={projectRef} />
     </PrimaryLayout>
   );
 };
