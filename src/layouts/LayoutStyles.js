@@ -17,6 +17,11 @@ const StyledImg = styled.img`
     bottom: -335px;
     left: -400px;
   }
+
+  @media (max-width: 320px) {
+    bottom: -445px;
+    left: -500px;
+  }
 `;
 
 export { StyledImg, StyledMain };
