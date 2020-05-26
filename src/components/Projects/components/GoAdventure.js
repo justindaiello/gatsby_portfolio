@@ -7,7 +7,7 @@ function GoAdventure() {
     <GoAdventureDiv>
       <div className="green">
         <ProjectLink
-          href="https://app.getlinus.io"
+          href="https://goadventure-next-prod.herokuapp.com/"
           target="_blank"
           rel="noopener noreferrer"
           variant="yellow"
