@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledImg } from './LayoutStyles';
+import { StyledImg, StyledMain } from './LayoutStyles';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import Polygon from '../images/Polygon.svg';
@@ -35,12 +35,12 @@ const PrimaryLayout = ({ children }) => {
 
   return (
     <ThemeProvider theme={toggleTheme(hasDarkTheme)}>
-      <main>
+      <StyledMain>
         <Switch handleClick={handleThemeChange} title="Switch Theme" />
         <GlobalStyle />
         {children}
         <StyledImg src={Polygon} />
-      </main>
+      </StyledMain>
     </ThemeProvider>
   );
 };

@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+const StyledMain = styled.main`
+  .top {
+    height: 100vh;
+  }
+`;
+
 const StyledImg = styled.img`
   position: fixed;
   bottom: -235px;
@@ -8,4 +14,4 @@ const StyledImg = styled.img`
   transform: rotate(10deg);
 `;
 
-export { StyledImg };
+export { StyledImg, StyledMain };

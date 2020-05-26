@@ -13,7 +13,7 @@ const showHidden = keyframes`
 const StyledHero = styled.div`
   position: absolute;
   width: 100%;
-  top: 30%;
+  top: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
