@@ -38,6 +38,10 @@ const StyledHero = styled.div`
     @media (max-width: 600px) {
       font-size: 1.75rem;
     }
+
+    @media (max-width: 320px) {
+      font-size: 1.5rem;
+    }
   }
 
   @media (max-width: 600px) {
@@ -82,6 +86,12 @@ const StyledList = styled.ul`
 
     li {
       text-align: center;
+    }
+  }
+
+  @media (max-width: 320px) {
+    li {
+      font-size: 1.5rem;
     }
   }
 `;
