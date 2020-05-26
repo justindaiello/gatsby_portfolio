@@ -39,7 +39,7 @@ const StyledHero = styled.div`
       font-size: 1.75rem;
     }
 
-    @media (max-width: 350px) {
+    @media (max-width: 375px) and (max-height: 667px) {
       font-size: 1.5rem;
     }
   }
@@ -89,7 +89,7 @@ const StyledList = styled.ul`
     }
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 375px) and (max-height: 667px) {
     li {
       font-size: 1.5rem;
     }

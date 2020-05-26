@@ -18,7 +18,7 @@ const StyledImg = styled.img`
     left: -400px;
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 375px) and (max-height: 667px) {
     bottom: -445px;
     left: -500px;
   }
