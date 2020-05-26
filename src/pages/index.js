@@ -2,7 +2,7 @@ import React from 'react';
 
 import Hero from '../components/Hero';
 import SEO from '../components/SEO/SEO';
-import Header from '../components/Header';
+import Header from '../components/Test';
 import Projects from '../components/Projects';
 import PrimaryLayout from '../layouts/PrimaryLayout';
 
