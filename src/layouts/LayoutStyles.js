@@ -12,6 +12,11 @@ const StyledImg = styled.img`
   left: -300px;
   z-index: -1;
   transform: rotate(10deg);
+
+  @media (max-width: 600px) {
+    bottom: -335px;
+    left: -400px;
+  }
 `;
 
 export { StyledImg, StyledMain };

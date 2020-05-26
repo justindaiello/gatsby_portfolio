@@ -11,6 +11,10 @@ const LinusAppDiv = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const LinusMarketingDiv = styled.div`
@@ -24,6 +28,10 @@ const LinusMarketingDiv = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const GoAdventureDiv = styled.div`
@@ -36,6 +44,10 @@ const GoAdventureDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
   }
 `;
 

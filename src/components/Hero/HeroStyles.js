@@ -19,6 +19,7 @@ const StyledHero = styled.div`
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.text};
+  padding: 0 20px;
 
   h1 {
     margin-bottom: 2rem;
@@ -33,6 +34,14 @@ const StyledHero = styled.div`
     margin-top: 0;
     animation: ${showHidden} 1s linear;
     font-weight: 300;
+
+    @media (max-width: 600px) {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    top: 15%;
   }
 `;
 
@@ -63,6 +72,16 @@ const StyledList = styled.ul`
       &:focus {
         outline: 2px solid ${(props) => props.theme.accent};
       }
+    }
+  }
+
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    li {
+      text-align: center;
     }
   }
 `;

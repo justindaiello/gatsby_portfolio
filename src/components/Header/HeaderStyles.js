@@ -6,6 +6,10 @@ const StyledHeader = styled.header`
   justify-content: flex-start;
   align-items: center;
   padding: 2rem;
+
+  @media (max-width: 600px) {
+    position: relative;
+  }
 `;
 
 const StyledButton = styled.button`
@@ -53,6 +57,10 @@ const StyledButton = styled.button`
     &:after {
       width: calc(100% - 60px);
     }
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 1rem;
   }
 `;
 
