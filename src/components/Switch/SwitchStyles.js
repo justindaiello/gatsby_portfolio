@@ -52,6 +52,10 @@ const StyledSwitch = styled.button`
     width: 17px;
     bottom: 4px;
   }
+
+  @media (max-width: 600px) {
+    right: 2.75rem;
+  }
 `;
 
 export { StyledSwitch };
