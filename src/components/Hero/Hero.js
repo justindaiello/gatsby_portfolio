@@ -29,11 +29,7 @@ function Hero({ isHidden }) {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://docs.google.com/document/d/1_FT1aUWIKau8MC4-LyG80AAVUx3IGFc-KW6bKx0i23Q/edit?usp=sharing"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
+                <a href={resumeLink} rel="noopener noreferrer" target="_blank">
                   Resume
                 </a>
               </li>
@@ -54,3 +50,6 @@ function Hero({ isHidden }) {
 }
 
 export default Hero;
+
+const resumeLink =
+  'https://res.cloudinary.com/reactstore/image/upload/v1590546145/resume/aiello_resume_eeg8lj.pdf';
