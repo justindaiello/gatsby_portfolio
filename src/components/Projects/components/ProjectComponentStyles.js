@@ -97,6 +97,16 @@ const ProjectLink = styled.a`
       width: calc(100% - 60px);
     }
   }
+
+  @media (max-width: 700px) {
+    &:focus {
+      outline: 2px solid ${(props) => handleUnderline(props.variant)};
+    }
+
+    &:after {
+      background: none;
+    }
+  }
 `;
 
 //dynamically render underline for links based on props.variant

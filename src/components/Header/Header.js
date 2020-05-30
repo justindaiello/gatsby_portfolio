@@ -11,9 +11,14 @@ const Header = ({ setIsHidden, isHidden, projectRef }) => {
     });
   }
 
+  function handleAboutClick() {
+    setIsHidden(!isHidden);
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }
+
   return (
     <StyledHeader>
-      <StyledButton onClick={() => setIsHidden(!isHidden)}>About</StyledButton>
+      <StyledButton onClick={handleAboutClick}>About</StyledButton>
       <StyledButton onClick={handleScrollDown}>Work</StyledButton>
     </StyledHeader>
   );
