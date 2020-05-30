@@ -45,10 +45,6 @@ const StyledButton = styled.button`
     transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
     left: 50%;
     margin-top: 1rem;
-
-    @media (max-width: 700px) {
-      background: none;
-    }
   }
 
   &:hover,
@@ -57,6 +53,16 @@ const StyledButton = styled.button`
 
     &:after {
       width: calc(100% - 60px);
+    }
+  }
+
+  @media (max-width: 700px) {
+    &:focus {
+      outline: 2px solid ${(props) => props.theme.accent};
+    }
+
+    &:after {
+      background: none;
     }
   }
 
