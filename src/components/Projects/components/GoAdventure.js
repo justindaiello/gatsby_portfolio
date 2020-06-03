@@ -12,7 +12,7 @@ function GoAdventure() {
           rel="noopener noreferrer"
           variant="yellow"
         >
-          GoAdventure Store
+          Go Adventure Store
         </ProjectLink>
       </div>
       <div className="matchBody" />
