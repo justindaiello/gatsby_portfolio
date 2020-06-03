@@ -92,7 +92,7 @@ const StyledList = styled.ul`
         transition: width 0.4s;
         transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
         left: 50%;
-        margin-top: 1rem;
+        bottom: 0;
       }
 
       &:hover,
