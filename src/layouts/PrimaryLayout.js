@@ -7,6 +7,8 @@ import lightTheme from '../styles/lightTheme';
 import darkTheme from '../styles/darkTheme';
 import Switch from '../components/Switch';
 
+import 'normalize.css';
+
 const GlobalStyle = createGlobalStyle`
   body {
     background: ${(props) => props.theme.body}
