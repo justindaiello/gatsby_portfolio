@@ -51,6 +51,23 @@ const GoAdventureDiv = styled.div`
   }
 `;
 
+const AprToApyDiv = styled.div`
+  display: grid;
+  grid-template-columns: 35% auto;
+  grid-template-rows: 200px;
+
+  .red {
+    background: #c25b56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
 const ProjectLink = styled.a`
   text-decoration: none;
   color: ${(props) => props.theme.text};
@@ -127,4 +144,10 @@ function handleUnderline(variant) {
   }
 }
 
-export { LinusAppDiv, LinusMarketingDiv, GoAdventureDiv, ProjectLink };
+export {
+  LinusAppDiv,
+  LinusMarketingDiv,
+  GoAdventureDiv,
+  ProjectLink,
+  AprToApyDiv,
+};
