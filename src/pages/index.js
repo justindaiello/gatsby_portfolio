@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Projects from '../components/Projects';
 import PrimaryLayout from '../layouts/PrimaryLayout';
 
-export default () => {
+function IndexPage() {
   const [isHidden, setIsHidden] = React.useState(true);
   const projectRef = React.useRef(null);
 
@@ -22,4 +22,6 @@ export default () => {
       <Projects projectRef={projectRef} />
     </PrimaryLayout>
   );
-};
+}
+
+export default IndexPage;
