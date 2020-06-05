@@ -14,8 +14,14 @@ import Cypress from '../../../images/Cypress.png';
 import Cypress4x from '../../../images/Cypress4x.png';
 import Jest from '../../../images/Jest.png';
 import Jest4x from '../../../images/Jest4x.png';
+import Chart from '../../../images/Chart.png';
+import Chart4x from '../../../images/Chart4x.png';
+import Activity from '../../../images/Activity.png';
+import Activity4x from '../../../images/Activity4x.png';
+import Settings from '../../../images/Settings.png';
+import Settings4x from '../../../images/Settings4x.png';
 
-import { BuiltWithContainer, StyledLogo } from '../LinusStyles';
+import { StyledImageGrid, StyledLogo } from '../LinusStyles';
 
 const images = [
   { id: 1, src: JS, srcSet: `${JS} 1x, ${JS4x} 4x`, alt: 'JavaScript' },
@@ -59,9 +65,9 @@ const images = [
 
 function BuiltWith() {
   return (
-    <BuiltWithContainer>
-      <h2>Front-end built with:</h2>
-      <div className="images">
+    <StyledImageGrid>
+      <div className="logos">
+        <h2>Front-end built with:</h2>
         {images.map((image) => (
           <StyledLogo
             src={image.src}
@@ -71,7 +77,27 @@ function BuiltWith() {
           />
         ))}
       </div>
-    </BuiltWithContainer>
+      <img
+        src={Chart}
+        srcSet={`${Chart} 1x, ${Chart4x} 4x`}
+        alt="Linus Deposit Chart"
+        className="image"
+      />
+      <img
+        src={Activity}
+        srcSet={`${Activity} 1x, ${Activity4x} 4x`}
+        alt="Linus 2FA"
+        className="image"
+      />
+      <div>filler</div>
+      <div>filler</div>
+      <img
+        src={Settings}
+        srcSet={`${Settings} 1x, ${Settings4x} 4x`}
+        alt="Linus Settings"
+        className="image"
+      />
+    </StyledImageGrid>
   );
 }
 
