@@ -1,0 +1,4 @@
+export default {
+  SET_IS_OPEN: 'SET_IS_OPEN',
+  SET_HAS_DARK_THEME: 'SET_HAS_DARK_THEME',
+};
