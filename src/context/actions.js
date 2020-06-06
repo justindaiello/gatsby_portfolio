@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
 
-const setIsOpen = createAction('setIsOpen');
+const setIsHidden = createAction('setIsHidden');
 const setHasDarkTheme = createAction('setHasDarkTheme');
 
-export default { setIsOpen, setHasDarkTheme };
+export default { setIsHidden, setHasDarkTheme };

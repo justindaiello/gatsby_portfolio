@@ -2,13 +2,13 @@ import { createReducer } from '@reduxjs/toolkit';
 import actions from './actions';
 
 const initialState = {
-  isOpen: false,
+  isHidden: false,
   hasDarkTheme: true,
 };
 
 export default createReducer(initialState, {
-  [actions.setIsOpen]: (state) => {
-    state.isOpen = !state.isOpen;
+  [actions.setIsHidden]: (state) => {
+    state.isHidden = !state.isHidden;
   },
 
   [actions.setHasDarkTheme]: (state) => {

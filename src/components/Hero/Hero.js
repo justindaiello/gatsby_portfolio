@@ -1,7 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+
 import { StyledHero, StyledList } from './HeroStyles';
 
-function Hero({ isHidden }) {
+function Hero() {
+  const { isHidden } = useSelector((state) => state);
   return (
     <div style={{ height: '100vh' }}>
       <StyledHero>

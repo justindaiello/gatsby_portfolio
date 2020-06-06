@@ -18,11 +18,10 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const PrimaryLayout = ({ children }) => {
-  // const [hasDarkTheme, setHasDarkTheme] = React.useState(true);
   const dispatch = useDispatch();
   const { hasDarkTheme } = useSelector((state) => state);
 
-  function toggleTheme(hasDarkTheme) {
+  function toggleTheme() {
     switch (hasDarkTheme) {
       case true: {
         return darkTheme;
@@ -40,8 +39,7 @@ const PrimaryLayout = ({ children }) => {
   }
 
   return (
-    <ThemeProvider theme={toggleTheme(hasDarkTheme)}>
-      {console.log(hasDarkTheme)}
+    <ThemeProvider theme={toggleTheme()}>
       <StyledMain>
         <Switch handleClick={handleThemeChange} title="Switch Theme" />
         <GlobalStyle />
