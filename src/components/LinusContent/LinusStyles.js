@@ -26,6 +26,10 @@ const StyledImageGrid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 8rem 0;
 
+  .appImage {
+    grid-column: 1 / 3;
+  }
+
   .mobileImage {
     display: none;
   }
