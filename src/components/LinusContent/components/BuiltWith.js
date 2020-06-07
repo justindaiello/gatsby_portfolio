@@ -1,8 +1,6 @@
 import React from 'react';
-import Img from 'gatsby-image';
-import { useStaticQuery, graphql } from 'gatsby';
 
-import { StyledImageGrid, StyledLogo, StyledInfoDiv } from '../LinusStyles';
+import { StyledImageGrid, StyledLogo } from '../LinusStyles';
 
 import Gitlab from '../../../images/Gitlab.png';
 import Gitlab4x from '../../../images/Gitlab4x.png';
@@ -18,12 +16,6 @@ import Cypress from '../../../images/Cypress.png';
 import Cypress4x from '../../../images/Cypress4x.png';
 import Jest from '../../../images/Jest.png';
 import Jest4x from '../../../images/Jest4x.png';
-// import Chart from '../../../images/Chart.png';
-// import Chart4x from '../../../images/Chart4x.png';
-// import Activity from '../../../images/Activity.png';
-// import Activity4x from '../../../images/Activity4x.png';
-// import Settings from '../../../images/Settings.png';
-// import Settings4x from '../../../images/Settings4x.png';
 // import MobileChart from '../../../images/MobileChart.png';
 // import MobileChart4x from '../../../images/MobileChart4x.png';
 // import MobileActivity from '../../../images/MobileActivity.png';
@@ -72,35 +64,22 @@ const images = [
 ];
 
 function BuiltWith() {
-  const data = useStaticQuery(graphql`
-    query AppImage {
-      imageSharp: file(relativePath: { eq: "Chart.png" }) {
-        id
-        childImageSharp {
-          fluid(pngQuality: 100, maxWidth: 2000) {
-            sizes
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
   return (
-    <StyledImageGrid>
-      <div className="logos">
-        <h2>Front-end built with:</h2>
-        {images.map((image) => (
-          <StyledLogo
-            src={image.src}
-            srcSet={image.srcSet}
-            alt={image.alt}
-            key={image.id}
-          />
-        ))}
-      </div>
-      <Img fluid={data.imageSharp.childImageSharp.fluid} className="appImage" />
-    </StyledImageGrid>
+    <>
+      <StyledImageGrid>
+        <div className="logos">
+          <h2>Front-end built with:</h2>
+          {images.map((image) => (
+            <StyledLogo
+              src={image.src}
+              srcSet={image.srcSet}
+              alt={image.alt}
+              key={image.id}
+            />
+          ))}
+        </div>
+      </StyledImageGrid>
+    </>
   );
 }
 

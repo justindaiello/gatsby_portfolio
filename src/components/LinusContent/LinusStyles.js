@@ -21,26 +21,9 @@ const StyledHeader = styled.h1`
 const StyledImageGrid = styled.div`
   display: grid;
   max-width: 1200px;
-  width: 100%;
   margin: 5rem auto;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 8rem 0;
-
-  .appImage {
-    grid-column: 1 / 3;
-    justify-self: center;
-  }
-
-  .mobileImage {
-    display: none;
-  }
-
-  .image {
-    width: 600px;
-    height: 341px;
-    border-radius: 12px;
-    align-self: center;
-  }
 
   .logos {
     display: grid;
@@ -123,18 +106,6 @@ const StyledImageGrid = styled.div`
     }
   }
 
-  @media (max-width: 650px) {
-    .image {
-      display: none;
-    }
-
-    .mobileImage {
-      display: block;
-      justify-self: center;
-      border-radius: 12px;
-    }
-  }
-
   @media (max-width: 450px) {
     .logos {
       grid-template-columns: repeat(2, 1fr);
@@ -178,18 +149,16 @@ const StyledLogo = styled.img`
   max-height: 100px;
 `;
 
-const StyledInfoDiv = styled.div`
-  ${(props) => (props.left ? `margin-left: 4rem` : `margin-left: 0`)};
+const StyledImgContainer = styled.div`
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5rem 0;
+  margin: 10rem auto;
 
-  p {
-    color: ${(props) => props.theme.text};
-  }
-
-  @media (max-width: 1200px) {
-    p {
-      text-align: center;
-    }
+  .appImage {
+    border-radius: 12px;
   }
 `;
 
-export { StyledHeader, StyledImageGrid, StyledLogo, StyledInfoDiv };
+export { StyledHeader, StyledImageGrid, StyledLogo, StyledImgContainer };
