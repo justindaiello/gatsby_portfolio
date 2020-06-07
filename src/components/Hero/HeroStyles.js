@@ -72,6 +72,14 @@ const StyledHero = styled.div`
       display: block;
     }
   }
+
+  @media (max-width: 375px) and (max-height: 667px) {
+    top: 5%;
+
+    h1 {
+      margin-top: 0;
+    }
+  }
 `;
 
 const StyledList = styled.ul`
