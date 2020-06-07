@@ -2,7 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { StyledImgContainer } from '../LinusStyles';
+import { StyledImgContainer } from './ScreenShotsStyles';
 
 function ScreenShots() {
   const imgData = useStaticQuery(graphql`
@@ -99,7 +99,7 @@ function ScreenShots() {
 
   return (
     <StyledImgContainer>
-      <Img fluid={chartSources} className="appImage" />
+      <Img fluid={chartSources} className="appImage" loading="eager" />
       <Img fluid={activitySources} className="appImage" />
       <Img fluid={settingsSources} className="appImage" />
     </StyledImgContainer>

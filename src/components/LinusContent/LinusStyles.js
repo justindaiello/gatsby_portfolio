@@ -1,195 +1,66 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg)
-  }
-
-  to {
-    transform: rotate(360deg)
-  }
-`;
-
-const StyledHeader = styled.h1`
-  font-size: 3rem;
-  font-weight: 300;
-  margin-top: 2rem;
+const ContentContainer = styled.div`
   text-align: center;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    color: ${(props) => props.theme.text};
+  }
+`;
+
+const StyledLink = styled.a`
   color: ${(props) => props.theme.text};
-`;
+  text-decoration: none;
+  transition: all 0.2s;
+  position: relative;
+  display: inline-block;
 
-const StyledImageGrid = styled.div`
-  display: grid;
-  max-width: 1200px;
-  margin: 5rem auto;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 8rem 0;
+  &:before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
 
-  .logos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 3rem 2rem;
+  &:after {
+    height: 2px;
+    background: ${(props) => props.theme.accent};
+    content: '';
+    width: 0;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: width 0.4s;
+    transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
+    left: 50%;
+    bottom: 0;
+  }
 
-    h2 {
-      grid-row: 1;
-      grid-column: 1 / 4;
-      color: ${(props) => props.theme.text};
-      font-weight: 300;
-      font-size: 2rem;
-      justify-self: center;
-    }
+  &:hover,
+  &:focus {
+    outline: none;
 
-    img {
-      justify-self: center;
-    }
-
-    img:first-of-type {
-      grid-row: 2;
-      grid-column: 2;
-    }
-
-    img:nth-of-type(2) {
-      grid-row: 2;
-      grid-column: 3;
-      cursor: pointer;
-
-      &:hover {
-        animation: ${rotate} 2s linear infinite;
-      }
-    }
-
-    img:nth-of-type(3) {
-      grid-row: 3;
-      grid-column: 1 / 3;
-      cursor: pointer;
-
-      &:hover {
-        animation: ${rotate} 2s linear infinite;
-      }
-    }
-
-    img:nth-of-type(4) {
-      grid-row: 3;
-      grid-column: 2 / 4;
-    }
-
-    img:nth-of-type(5) {
-      grid-row: 3;
-      grid-column: 3 / 5;
-    }
-
-    img:nth-of-type(6) {
-      grid-row: 4;
-      grid-column: 2;
-    }
-
-    img:last-of-type {
-      grid-row: 4;
-      grid-column: 3;
+    &:after {
+      width: 100%;
     }
   }
 
-  @media (max-width: 1200px) {
-    grid-template-columns: 1fr;
-    grid-gap: 5rem 0;
+  @media (max-width: 700px) {
+    display: inline-block;
 
-    div:nth-of-type(2) {
-      grid-row: 3;
+    &:focus {
+      outline: 2px solid ${(props) => props.theme.accent};
     }
 
-    div:nth-of-type(3) {
-      grid-row: 5;
-    }
-
-    .image {
-      justify-self: center;
-    }
-  }
-
-  @media (max-width: 450px) {
-    .logos {
-      grid-template-columns: repeat(2, 1fr);
-
-      img:first-of-type {
-        grid-column: 1;
-      }
-
-      img:nth-of-type(2) {
-        grid-column: 2;
-      }
-
-      img:nth-of-type(3) {
-        grid-column: 1;
-      }
-
-      img:nth-of-type(4) {
-        grid-column: 2;
-      }
-
-      img:nth-of-type(5) {
-        grid-row: 4;
-        grid-column: 1;
-      }
-
-      img:nth-of-type(6) {
-        grid-row: 4;
-        grid-column: 2;
-      }
-
-      img:last-of-type {
-        grid-row: 5;
-        grid-column: 1 / 3;
-      }
+    &:after {
+      background: none;
     }
   }
 `;
 
-const StyledLogo = styled.img`
-  max-width: 100px;
-  max-height: 100px;
-`;
-
-const StyledImgContainer = styled.div`
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 5rem 0;
-  margin: 10rem auto;
-
-  .appImage {
-    border-radius: 12px;
-    box-shadow: ${(props) => props.theme.boxShadow};
-  }
-
-  @media (max-width: 999px) {
-    grid-template-columns: repeat(2, 1fr);
-
-    .appImage {
-      justify-self: center;
-      width: 375px;
-    }
-
-    .appImage:last-child,
-    .appImage:first-child {
-      grid-row: 1;
-    }
-
-    .appImage:nth-of-type(2) {
-      grid-column: 1 / 3;
-    }
-  }
-
-  @media (max-width: 850px) {
-    grid-template-columns: 1fr;
-
-    .appImage:first-child {
-      grid-row: 1;
-    }
-
-    .appImage:last-child {
-      grid-row: 3;
-    }
-  }
-`;
-
-export { StyledHeader, StyledImageGrid, StyledLogo, StyledImgContainer };
+export { ContentContainer, StyledLink };

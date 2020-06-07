@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledImageGrid, StyledLogo } from '../LinusStyles';
+import { StyledImageGrid, StyledLogo } from './BuiltWithStyles';
 
 import Gitlab from '../../../images/Gitlab.png';
 import Gitlab4x from '../../../images/Gitlab4x.png';
@@ -16,12 +16,6 @@ import Cypress from '../../../images/Cypress.png';
 import Cypress4x from '../../../images/Cypress4x.png';
 import Jest from '../../../images/Jest.png';
 import Jest4x from '../../../images/Jest4x.png';
-// import MobileChart from '../../../images/MobileChart.png';
-// import MobileChart4x from '../../../images/MobileChart4x.png';
-// import MobileActivity from '../../../images/MobileActivity.png';
-// import MobileActivity4x from '../../../images/MobileActivity4x.png';
-// import MobileSettings from '../../../images/MobileSettings.png';
-// import MobileSettings4x from '../../../images/MobileSettings4x.png';
 
 const images = [
   { id: 1, src: JS, srcSet: `${JS} 1x, ${JS4x} 4x`, alt: 'JavaScript' },
