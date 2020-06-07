@@ -1,14 +1,28 @@
 import React from 'react';
 
-import { StyledHeader } from './LinusStyles';
+import { ContentContainer, StyledLink } from './LinusStyles';
+import { GatsbyLink } from '../Projects/components/ProjectComponentStyles';
 import BuiltWith from './components/BuiltWith';
+import ScreenShots from './components/ScreenShots';
 
 function LinusContent() {
   return (
-    <div>
-      <StyledHeader>Linus App</StyledHeader>
+    <ContentContainer>
+      <GatsbyLink to="/" className="homeLink">
+        Home
+      </GatsbyLink>
+      <h1>Linus App</h1>
+      <StyledLink
+        variant="blue"
+        href="https://app.getlinus.io"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visit Live Site
+      </StyledLink>
       <BuiltWith />
-    </div>
+      <ScreenShots />
+    </ContentContainer>
   );
 }
 

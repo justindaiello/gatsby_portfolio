@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Link } from 'gatsby';
 
 const LinusAppDiv = styled.div`
   display: grid;
@@ -68,7 +69,7 @@ const AprToApyDiv = styled.div`
   }
 `;
 
-const ProjectLink = styled.a`
+const linkStyles = css`
   text-decoration: none;
   color: ${(props) => props.theme.text};
   text-transform: uppercase;
@@ -126,6 +127,13 @@ const ProjectLink = styled.a`
   }
 `;
 
+const ProjectLink = styled.a`
+  ${linkStyles}
+`;
+const GatsbyLink = styled(Link)`
+  ${linkStyles}
+`;
+
 //dynamically render underline for links based on props.variant
 function handleUnderline(variant) {
   switch (variant) {
@@ -150,4 +158,5 @@ export {
   GoAdventureDiv,
   ProjectLink,
   AprToApyDiv,
+  GatsbyLink,
 };

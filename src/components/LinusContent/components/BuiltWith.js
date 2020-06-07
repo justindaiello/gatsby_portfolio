@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledImageGrid, StyledLogo, StyledInfoDiv } from '../LinusStyles';
+import { StyledImageGrid, StyledLogo } from './BuiltWithStyles';
 
 import Gitlab from '../../../images/Gitlab.png';
 import Gitlab4x from '../../../images/Gitlab4x.png';
@@ -16,18 +16,6 @@ import Cypress from '../../../images/Cypress.png';
 import Cypress4x from '../../../images/Cypress4x.png';
 import Jest from '../../../images/Jest.png';
 import Jest4x from '../../../images/Jest4x.png';
-import Chart from '../../../images/Chart.png';
-import Chart4x from '../../../images/Chart4x.png';
-import Activity from '../../../images/Activity.png';
-import Activity4x from '../../../images/Activity4x.png';
-import Settings from '../../../images/Settings.png';
-import Settings4x from '../../../images/Settings4x.png';
-import MobileChart from '../../../images/MobileChart.png';
-import MobileChart4x from '../../../images/MobileChart4x.png';
-import MobileActivity from '../../../images/MobileActivity.png';
-import MobileActivity4x from '../../../images/MobileActivity4x.png';
-import MobileSettings from '../../../images/MobileSettings.png';
-import MobileSettings4x from '../../../images/MobileSettings4x.png';
 
 const images = [
   { id: 1, src: JS, srcSet: `${JS} 1x, ${JS4x} 4x`, alt: 'JavaScript' },
@@ -71,61 +59,50 @@ const images = [
 
 function BuiltWith() {
   return (
-    <StyledImageGrid>
-      <div className="logos">
-        <h2>Front-end built with:</h2>
-        {images.map((image) => (
-          <StyledLogo
-            src={image.src}
-            srcSet={image.srcSet}
-            alt={image.alt}
-            key={image.id}
-          />
-        ))}
-      </div>
-      <img
-        src={Chart}
-        srcSet={`${Chart} 1x, ${Chart4x} 4x`}
-        alt="Linus Deposit Chart"
-        className="image"
-      />
-      <img
-        src={MobileChart}
-        srcSet={`${MobileChart} 1x, ${MobileChart4x} 4x`}
-        alt="Linus Deposit Chart Mobile"
-        className="mobileImage"
-      />
-      <img
-        src={Activity}
-        srcSet={`${Activity} 1x, ${Activity4x} 4x`}
-        alt="Linus Activity"
-        className="image"
-      />
-      <img
-        src={MobileActivity}
-        srcSet={`${MobileActivity} 1x, ${MobileActivity4x} 4x`}
-        alt="Linus Activity Mobile"
-        className="mobileImage"
-      />
-      <StyledInfoDiv left>
-        <p>Linus is an alternative to traditional cash deposit accounts.</p>
-      </StyledInfoDiv>
-      <StyledInfoDiv>
-        <p>Here is some more info</p>
-      </StyledInfoDiv>
-      <img
-        src={Settings}
-        srcSet={`${Settings} 1x, ${Settings4x} 4x`}
-        alt="Linus Settings"
-        className="image"
-      />
-      <img
-        src={MobileSettings}
-        srcSet={`${MobileSettings} 1x, ${MobileSettings4x} 4x`}
-        alt="Linus Settings Mobile"
-        className="mobileImage"
-      />
-    </StyledImageGrid>
+    <>
+      <StyledImageGrid>
+        <div className="logos">
+          <h2>Front-end built with:</h2>
+          {images.map((image) => (
+            <StyledLogo
+              src={image.src}
+              srcSet={image.srcSet}
+              alt={image.alt}
+              key={image.id}
+            />
+          ))}
+        </div>
+        <div className="info">
+          <h2>Linus is a high-yield alternative to cash deposit accounts</h2>
+          <p>Here are a few things I worked on:</p>
+          <ul>
+            <li>
+              Implemented the design and logic for an interactive deposit chart
+            </li>
+            <li>
+              Connected third party integrations for Stripe, Plaid and MapBox
+            </li>
+            <li>
+              Added to and helped manage business logic for the front-end API
+              client that interfaced with the back-end
+            </li>
+            <li>
+              Built the two-factor authentication UI with scannable QR code
+            </li>
+            <li>
+              Designed and implemented mobile responsiveness across the
+              application
+            </li>
+            <li>Wrote unit and end-to-end tests with Jest and Cypress</li>
+            <li>
+              Worked with back-end engineers to connect new features to the
+              front-end
+            </li>
+            <li>Added accessibility features throughout the application</li>
+          </ul>
+        </div>
+      </StyledImageGrid>
+    </>
   );
 }
 

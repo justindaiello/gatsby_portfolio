@@ -2,7 +2,7 @@ import { createReducer } from '@reduxjs/toolkit';
 import actions from './actions';
 
 const initialState = {
-  isHidden: false,
+  isHidden: true,
   hasDarkTheme: true,
 };
 
