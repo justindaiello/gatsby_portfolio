@@ -28,6 +28,7 @@ const StyledImageGrid = styled.div`
 
   .appImage {
     grid-column: 1 / 3;
+    justify-self: center;
   }
 
   .mobileImage {

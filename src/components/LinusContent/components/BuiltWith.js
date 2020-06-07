@@ -74,10 +74,10 @@ const images = [
 function BuiltWith() {
   const data = useStaticQuery(graphql`
     query AppImage {
-      imageSharp: file(relativePath: { eq: "Activity.png" }) {
+      imageSharp: file(relativePath: { eq: "Chart.png" }) {
         id
         childImageSharp {
-          fluid(pngQuality: 100, maxWidth: 1200) {
+          fluid(pngQuality: 100, maxWidth: 2000) {
             sizes
             ...GatsbyImageSharpFluid
           }
