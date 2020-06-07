@@ -16,6 +16,16 @@ const ContentContainer = styled.div`
     margin: 2rem 0 1rem;
     color: ${(props) => props.theme.text};
   }
+
+  @media (max-width: 600px) {
+    .homeLink {
+      left: 0;
+    }
+
+    h1 {
+      padding-top: 5rem;
+    }
+  }
 `;
 
 const StyledLink = styled.a`
