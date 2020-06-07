@@ -11,6 +11,7 @@ const StyledSwitch = styled.button`
   ${(props) => (props.isOn ? `background: #393939` : `background: #F9F9F8`)};
   border-radius: 19px;
   z-index: 99;
+  box-shadow: ${(props) => props.theme.lightBoxShadow};
 
   &:after {
     content: '';

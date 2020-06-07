@@ -62,7 +62,6 @@ function BuiltWith() {
     <>
       <StyledImageGrid>
         <div className="logos">
-          <h2>Front-end built with:</h2>
           {images.map((image) => (
             <StyledLogo
               src={image.src}
@@ -72,6 +71,8 @@ function BuiltWith() {
             />
           ))}
         </div>
+        <span className="divider" />
+        <hr className="mobileDivider" />
         <div className="info">
           <h2>Linus is a high-yield alternative to cash deposit accounts</h2>
           <p>Here are a few things I worked on:</p>

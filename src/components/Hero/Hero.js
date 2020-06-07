@@ -1,17 +1,53 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import { StyledHero, StyledList } from './HeroStyles';
+import { HeroContainer, StyledHero, StyledList, StyledImg } from './HeroStyles';
 
 function Hero() {
   const { isHidden } = useSelector((state) => state);
+
+  const data = useStaticQuery(graphql`
+    query Image {
+      selfie: file(relativePath: { eq: "Justin4x.png" }) {
+        id
+        childImageSharp {
+          fixed(pngQuality: 100, height: 200) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      selfieMobile: file(relativePath: { eq: "Justin4x.png" }) {
+        id
+        childImageSharp {
+          fixed(pngQuality: 100, height: 125) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
+
+  const selfieSources = [
+    data.selfie.childImageSharp.fixed,
+    {
+      ...data.selfieMobile.childImageSharp.fixed,
+      media: '(max-width: 600px)',
+    },
+  ];
+
   return (
-    <div style={{ height: '100vh' }}>
+    <HeroContainer>
       <StyledHero>
+        <StyledImg isHidden={isHidden} fixed={selfieSources} />
         <h1>Justin Aiello</h1>
         {!isHidden && (
           <>
-            <h2>Software Engineer | Asheville, NC</h2>
+            <p>
+              Hi! I'm a Software Engineer residing in Asheville, NC. I love to
+              create pixel-perfect user interfaces leveraging JavaScript, React,
+              Typescript and GraphQL.
+            </p>
             <StyledList>
               <li>
                 <a
@@ -48,7 +84,7 @@ function Hero() {
           </>
         )}
       </StyledHero>
-    </div>
+    </HeroContainer>
   );
 }
 
