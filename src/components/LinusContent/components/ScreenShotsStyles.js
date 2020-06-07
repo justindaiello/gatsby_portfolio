@@ -7,25 +7,35 @@ const StyledImgContainer = styled.div`
   grid-gap: 5rem 0;
   margin: 10rem auto;
 
-  .appImage {
+  .appImage,
+  .appImageMobile {
     border-radius: 12px;
     box-shadow: ${(props) => props.theme.boxShadow};
+  }
+
+  .appImageMobile {
+    display: none !important;
   }
 
   @media (max-width: 999px) {
     grid-template-columns: repeat(2, 1fr);
 
     .appImage {
-      justify-self: center;
-      width: 375px;
+      display: none !important;
     }
 
-    .appImage:last-child,
-    .appImage:first-child {
+    .appImageMobile {
+      justify-self: center;
+      width: 375px;
+      display: inline-block !important;
+    }
+
+    .appImageMobile:last-child,
+    .appImageMobile:first-child {
       grid-row: 1;
     }
 
-    .appImage:nth-of-type(2) {
+    .appImageMobile:nth-of-type(2) {
       grid-column: 1 / 3;
     }
   }
@@ -33,11 +43,11 @@ const StyledImgContainer = styled.div`
   @media (max-width: 850px) {
     grid-template-columns: 1fr;
 
-    .appImage:first-child {
+    .appImageMobile:first-child {
       grid-row: 1;
     }
 
-    .appImage:last-child {
+    .appImageMobile:last-child {
       grid-row: 3;
     }
   }
