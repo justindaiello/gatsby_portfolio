@@ -16,6 +16,26 @@ const StyledImageGrid = styled.div`
   margin: 5rem auto;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 8rem 0;
+  background: #86aba3;
+  padding: 2rem 2rem 3.5rem;
+  border-radius: 12px;
+  box-shadow: ${(props) => props.theme.boxShadow};
+  color: ${(props) => props.theme.text};
+
+  h2 {
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 2.2rem;
+  }
+
+  .info {
+    text-align: left;
+
+    p,
+    ul {
+      font-size: 1.65rem;
+    }
+  }
 
   .logos {
     display: grid;
@@ -25,9 +45,6 @@ const StyledImageGrid = styled.div`
     h2 {
       grid-row: 1;
       grid-column: 1 / 4;
-      color: ${(props) => props.theme.text};
-      font-weight: 300;
-      font-size: 2rem;
       justify-self: center;
     }
 
@@ -95,6 +112,15 @@ const StyledImageGrid = styled.div`
 
     .image {
       justify-self: center;
+    }
+
+    .info {
+      text-align: center;
+
+      ul {
+        display: inline-block;
+        text-align: left;
+      }
     }
   }
 

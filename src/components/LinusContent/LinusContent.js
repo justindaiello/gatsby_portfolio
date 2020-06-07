@@ -8,7 +8,12 @@ function LinusContent() {
   return (
     <ContentContainer>
       <h1>Linus App</h1>
-      <StyledLink variant="blue" href="#">
+      <StyledLink
+        variant="blue"
+        href="https://app.getlinus.io"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Visit Live Site
       </StyledLink>
       <BuiltWith />

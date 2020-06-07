@@ -72,6 +72,35 @@ function BuiltWith() {
             />
           ))}
         </div>
+        <div className="info">
+          <h2>Linus is a high-yield alternative to cash deposit accounts</h2>
+          <p>Here are a few things I worked on:</p>
+          <ul>
+            <li>
+              Implemented the design and logic for an interactive deposit chart
+            </li>
+            <li>
+              Connected third party integrations for Stripe, Plaid and MapBox
+            </li>
+            <li>
+              Added to and helped manage business logic for the front-end API
+              client that interfaced with the back-end
+            </li>
+            <li>
+              Built the two-factor authentication UI with scannable QR code
+            </li>
+            <li>
+              Designed and implemented mobile responsiveness across the
+              application
+            </li>
+            <li>Wrote unit and end-to-end tests with Jest and Cypress</li>
+            <li>
+              Worked with back-end engineers to connect new features to the
+              front-end
+            </li>
+            <li>Added accessibility features throughout the application</li>
+          </ul>
+        </div>
       </StyledImageGrid>
     </>
   );

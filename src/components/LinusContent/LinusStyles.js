@@ -6,7 +6,7 @@ const ContentContainer = styled.div`
   h1 {
     font-size: 4rem;
     font-weight: 300;
-    margin-top: 2rem;
+    margin: 2rem 0 1rem;
     color: ${(props) => props.theme.text};
   }
 `;
