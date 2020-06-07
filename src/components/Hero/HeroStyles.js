@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import Img from 'gatsby-image';
 
 const showHidden = keyframes`
   from {
@@ -10,10 +11,20 @@ const showHidden = keyframes`
   }
 `;
 
+const HeroContainer = styled.div`
+  height: 100vh;
+`;
+
+const StyledImg = styled(Img)`
+  border-radius: 100%;
+  animation: ${showHidden} 1s linear;
+  ${(props) => (props.isHidden ? `visibility: hidden` : `visibility: visible`)}
+`;
+
 const StyledHero = styled.div`
   position: absolute;
   width: 100%;
-  top: 20%;
+  top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,14 +37,16 @@ const StyledHero = styled.div`
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: 300;
+    position: relative;
   }
 
-  h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
+  p {
+    font-size: 1.75rem;
+    max-width: 450px;
     margin-top: 0;
     animation: ${showHidden} 1s linear;
     font-weight: 300;
+    text-align: center;
 
     @media (max-width: 600px) {
       font-size: 1.75rem;
@@ -45,7 +58,7 @@ const StyledHero = styled.div`
   }
 
   @media (max-width: 600px) {
-    top: 15%;
+    top: 8%;
   }
 `;
 
@@ -135,4 +148,4 @@ const StyledList = styled.ul`
   }
 `;
 
-export { StyledHero, StyledList };
+export { HeroContainer, StyledHero, StyledList, StyledImg };

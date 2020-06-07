@@ -16,7 +16,7 @@ function ScreenShots() {
           }
         }
       }
-      chartImageMobile: file(relativePath: { eq: "MobileChart4x.png" }) {
+      chartImageMobile: file(relativePath: { eq: "MobileChart.png" }) {
         id
         childImageSharp {
           fluid(pngQuality: 100, maxWidth: 375) {
@@ -52,7 +52,7 @@ function ScreenShots() {
           }
         }
       }
-      settingsImageMobile: file(relativePath: { eq: "MobileSettings4x.png" }) {
+      settingsImageMobile: file(relativePath: { eq: "MobileSettings.png" }) {
         id
         childImageSharp {
           fluid(pngQuality: 100, maxWidth: 375) {
@@ -65,10 +65,7 @@ function ScreenShots() {
   `);
 
   const chartSources = [
-    {
-      ...imgData.chartImage.childImageSharp.fluid,
-      media: '(min-width: 1000px)',
-    },
+    imgData.chartImage.childImageSharp.fluid,
     {
       ...imgData.chartImageMobile.childImageSharp.fluid,
       media: '(max-width: 999px)',
@@ -76,10 +73,7 @@ function ScreenShots() {
   ];
 
   const activitySources = [
-    {
-      ...imgData.activityImage.childImageSharp.fluid,
-      media: '(min-width: 1000px)',
-    },
+    imgData.activityImage.childImageSharp.fluid,
     {
       ...imgData.activityImageMobile.childImageSharp.fluid,
       media: '(max-width: 999px)',
@@ -87,10 +81,7 @@ function ScreenShots() {
   ];
 
   const settingsSources = [
-    {
-      ...imgData.settingsImage.childImageSharp.fluid,
-      media: '(min-width: 1000px)',
-    },
+    imgData.settingsImage.childImageSharp.fluid,
     {
       ...imgData.settingsImageMobile.childImageSharp.fluid,
       media: '(max-width: 999px)',
