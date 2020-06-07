@@ -28,18 +28,21 @@ function Hero() {
     }
   `);
 
-  const selfieSources = [
-    data.selfieMobile.childImageSharp.fixed,
-    {
-      ...data.selfie.childImageSharp.fixed,
-      media: '(min-width: 600px)',
-    },
-  ];
-
   return (
     <HeroContainer>
       <StyledHero>
-        <StyledImg isHidden={isHidden} fixed={selfieSources} />
+        <figure className="desktopSelfie">
+          <StyledImg
+            fixed={data.selfie.childImageSharp.fixed}
+            isHidden={isHidden}
+          />
+        </figure>
+        <figure className="mobileSelfie">
+          <StyledImg
+            fixed={data.selfieMobile.childImageSharp.fixed}
+            isHidden={isHidden}
+          />
+        </figure>
         <h1>Justin Aiello</h1>
         {!isHidden && (
           <>
