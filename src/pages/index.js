@@ -6,20 +6,17 @@ import Header from '../components/Header';
 import Projects from '../components/Projects';
 import PrimaryLayout from '../layouts/PrimaryLayout';
 
-export default () => {
-  const [isHidden, setIsHidden] = React.useState(true);
+function IndexPage() {
   const projectRef = React.useRef(null);
 
   return (
     <PrimaryLayout>
       <SEO title="Asheville, NC" />
-      <Header
-        setIsHidden={setIsHidden}
-        isHidden={isHidden}
-        projectRef={projectRef}
-      />
-      <Hero isHidden={isHidden} />
+      <Header projectRef={projectRef} />
+      <Hero />
       <Projects projectRef={projectRef} />
     </PrimaryLayout>
   );
-};
+}
+
+export default IndexPage;

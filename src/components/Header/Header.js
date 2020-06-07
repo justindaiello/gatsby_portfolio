@@ -1,8 +1,13 @@
 import React from 'react';
 import { bool, func, object } from 'prop-types';
+import { useDispatch } from 'react-redux';
+
+import actions from '../../context/actions';
 import { StyledHeader, StyledButton } from './HeaderStyles';
 
-const Header = ({ setIsHidden, isHidden, projectRef }) => {
+const Header = ({ projectRef }) => {
+  const dispatch = useDispatch();
+
   function handleScrollDown() {
     projectRef.current.scrollIntoView({
       behavior: 'smooth',
@@ -12,7 +17,7 @@ const Header = ({ setIsHidden, isHidden, projectRef }) => {
   }
 
   function handleAboutClick() {
-    setIsHidden(!isHidden);
+    dispatch(actions.setIsHidden());
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }
 
