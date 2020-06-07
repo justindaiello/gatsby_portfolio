@@ -40,12 +40,13 @@ const StyledHero = styled.div`
     position: relative;
   }
 
-  h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
+  p {
+    font-size: 1.75rem;
+    max-width: 450px;
     margin-top: 0;
     animation: ${showHidden} 1s linear;
     font-weight: 300;
+    text-align: center;
 
     @media (max-width: 600px) {
       font-size: 1.75rem;

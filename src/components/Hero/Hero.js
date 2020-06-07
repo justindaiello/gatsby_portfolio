@@ -43,7 +43,11 @@ function Hero() {
         <h1>Justin Aiello</h1>
         {!isHidden && (
           <>
-            <h2>Software Engineer | Asheville, NC</h2>
+            <p>
+              Hi! I'm a Software Engineer residing in Asheville, NC. I love to
+              create pixel-perfect user interfaces leveraging JavaScript, React,
+              Typescript and GraphQL.
+            </p>
             <StyledList>
               <li>
                 <a
