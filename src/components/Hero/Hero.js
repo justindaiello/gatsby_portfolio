@@ -29,10 +29,10 @@ function Hero() {
   `);
 
   const selfieSources = [
-    data.selfie.childImageSharp.fixed,
+    data.selfieMobile.childImageSharp.fixed,
     {
-      ...data.selfieMobile.childImageSharp.fixed,
-      media: '(max-width: 600px)',
+      ...data.selfie.childImageSharp.fixed,
+      media: '(min-width: 600px)',
     },
   ];
 
