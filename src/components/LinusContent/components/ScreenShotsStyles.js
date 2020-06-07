@@ -7,35 +7,26 @@ const StyledImgContainer = styled.div`
   grid-gap: 5rem 0;
   margin: 10rem auto;
 
-  .appImage,
-  .appImageMobile {
+  .appImage {
     border-radius: 12px;
     box-shadow: ${(props) => props.theme.boxShadow};
-  }
-
-  .appImageMobile {
-    display: none !important;
   }
 
   @media (max-width: 999px) {
     grid-template-columns: repeat(2, 1fr);
 
     .appImage {
-      display: none !important;
-    }
-
-    .appImageMobile {
       justify-self: center;
       width: 375px;
-      display: inline-block !important;
+      image-rendering: crisp-edges;
     }
 
-    .appImageMobile:last-child,
-    .appImageMobile:first-child {
+    .appImage:last-child,
+    .appImage:first-child {
       grid-row: 1;
     }
 
-    .appImageMobile:nth-of-type(2) {
+    .appImage:nth-of-type(2) {
       grid-column: 1 / 3;
     }
   }
@@ -43,11 +34,11 @@ const StyledImgContainer = styled.div`
   @media (max-width: 850px) {
     grid-template-columns: 1fr;
 
-    .appImageMobile:first-child {
+    .appImage:first-child {
       grid-row: 1;
     }
 
-    .appImageMobile:last-child {
+    .appImage:last-child {
       grid-row: 3;
     }
   }

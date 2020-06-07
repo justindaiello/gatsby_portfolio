@@ -19,8 +19,9 @@ function ScreenShots() {
       chartImageMobile: file(relativePath: { eq: "MobileChart.png" }) {
         id
         childImageSharp {
-          fixed(height: 800, pngQuality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(pngQuality: 100, maxWidth: 375) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -36,8 +37,9 @@ function ScreenShots() {
       activityImageMobile: file(relativePath: { eq: "MobileActivity.png" }) {
         id
         childImageSharp {
-          fixed(height: 800, pngQuality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(pngQuality: 100, maxWidth: 375) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -53,66 +55,44 @@ function ScreenShots() {
       settingsImageMobile: file(relativePath: { eq: "MobileSettings.png" }) {
         id
         childImageSharp {
-          fixed(height: 800, pngQuality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(pngQuality: 100, maxWidth: 375) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
     }
   `);
 
-  // const chartSources = [
-  //   imgData.chartImage.childImageSharp.fluid,
-  //   {
-  //     ...imgData.chartImageMobile.childImageSharp.fluid,
-  //     media: '(max-width: 999px)',
-  //   },
-  // ];
+  const chartSources = [
+    imgData.chartImage.childImageSharp.fluid,
+    {
+      ...imgData.chartImageMobile.childImageSharp.fluid,
+      media: '(max-width: 999px)',
+    },
+  ];
 
-  // const activitySources = [
-  //   imgData.activityImage.childImageSharp.fluid,
-  //   {
-  //     ...imgData.activityImageMobile.childImageSharp.fluid,
-  //     media: '(max-width: 999px)',
-  //   },
-  // ];
+  const activitySources = [
+    imgData.activityImage.childImageSharp.fluid,
+    {
+      ...imgData.activityImageMobile.childImageSharp.fluid,
+      media: '(max-width: 999px)',
+    },
+  ];
 
-  // const settingsSources = [
-  //   imgData.settingsImage.childImageSharp.fluid,
-  //   {
-  //     ...imgData.settingsImageMobile.childImageSharp.fluid,
-  //     media: '(max-width: 999px)',
-  //   },
-  // ];
+  const settingsSources = [
+    imgData.settingsImage.childImageSharp.fluid,
+    {
+      ...imgData.settingsImageMobile.childImageSharp.fluid,
+      media: '(max-width: 999px)',
+    },
+  ];
 
   return (
     <StyledImgContainer>
-      <Img
-        fluid={imgData.chartImage.childImageSharp.fluid}
-        className="appImage"
-        loading="eager"
-      />
-      <Img
-        fluid={imgData.activityImage.childImageSharp.fluid}
-        className="appImage"
-      />
-      <Img
-        fluid={imgData.settingsImage.childImageSharp.fluid}
-        className="appImage"
-      />
-      <Img
-        fixed={imgData.chartImageMobile.childImageSharp.fixed}
-        className="appImageMobile"
-        loading="eager"
-      />
-      <Img
-        fixed={imgData.activityImageMobile.childImageSharp.fixed}
-        className="appImageMobile"
-      />
-      <Img
-        fixed={imgData.settingsImageMobile.childImageSharp.fixed}
-        className="appImageMobile"
-      />
+      <Img fluid={chartSources} className="appImage" loading="eager" />
+      <Img fluid={activitySources} className="appImage" />
+      <Img fluid={settingsSources} className="appImage" />
     </StyledImgContainer>
   );
 }
