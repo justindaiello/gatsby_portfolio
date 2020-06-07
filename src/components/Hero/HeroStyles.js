@@ -24,7 +24,7 @@ const StyledImg = styled(Img)`
 const StyledHero = styled.div`
   position: absolute;
   width: 100%;
-  top: 10%;
+  top: 8%;
   display: flex;
   flex-direction: column;
   justify-content: center;
