@@ -70,6 +70,11 @@ const StyledHero = styled.div`
 
     .mobileSelfie {
       display: block;
+      margin-bottom: 0;
+    }
+
+    h1 {
+      margin-top: 0.5rem;
     }
   }
 
