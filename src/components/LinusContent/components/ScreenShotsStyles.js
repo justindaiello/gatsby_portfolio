@@ -18,6 +18,7 @@ const StyledImgContainer = styled.div`
     .appImage {
       justify-self: center;
       width: 375px;
+      image-rendering: crisp-edges;
     }
 
     .appImage:last-child,
