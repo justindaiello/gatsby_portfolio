@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
 
+import actions from '../../context/actions';
 import { StyledSwitch } from './SwitchStyles';
 
 function Switch({ handleClick, title }) {
-  const [isOn, setIsOn] = React.useState(false);
+  const dispatch = useDispatch();
+  const { isOn } = useSelector((state) => state);
 
   function toggle() {
     handleClick();
-    setIsOn(!isOn);
+    dispatch(actions.setIsOn());
   }
 
   return (
