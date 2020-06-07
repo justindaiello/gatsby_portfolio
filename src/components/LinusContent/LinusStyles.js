@@ -7,14 +7,15 @@ const ContentContainer = styled.div`
     position: absolute;
     font-size: 1.5rem;
     left: 20px;
-    top: -5px;
+    top: 15px;
   }
 
   h1 {
     font-size: 4rem;
     font-weight: 300;
-    margin: 2rem 0 1rem;
+    margin: 0 0 1rem;
     color: ${(props) => props.theme.text};
+    padding-top: 2rem;
   }
 
   @media (max-width: 600px) {
