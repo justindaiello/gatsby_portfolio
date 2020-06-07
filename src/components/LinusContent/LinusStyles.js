@@ -5,7 +5,6 @@ const ContentContainer = styled.div`
 
   .homeLink {
     position: absolute;
-    /* padding: 1.7rem 0 0 5rem; */
     font-size: 1.5rem;
     left: 20px;
     top: -5px;
