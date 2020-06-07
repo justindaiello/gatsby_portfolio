@@ -32,6 +32,10 @@ const StyledHero = styled.div`
   color: ${(props) => props.theme.text};
   padding: 0 20px;
 
+  .mobileSelfie {
+    display: none;
+  }
+
   h1 {
     margin-bottom: 2rem;
     font-size: 3rem;
@@ -59,6 +63,14 @@ const StyledHero = styled.div`
 
   @media (max-width: 600px) {
     top: 8%;
+
+    .desktopSelfie {
+      display: none;
+    }
+
+    .mobileSelfie {
+      display: block;
+    }
   }
 `;
 
