@@ -155,6 +155,8 @@ const StyledImageGrid = styled.div`
   }
 
   @media (max-width: 450px) {
+    max-width: 350px;
+
     .logos {
       grid-template-columns: repeat(2, 1fr);
 
