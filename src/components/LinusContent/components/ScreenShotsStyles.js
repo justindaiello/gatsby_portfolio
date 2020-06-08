@@ -35,11 +35,6 @@ const StyledImgContainer = styled.div`
       image-rendering: crisp-edges;
     }
 
-    .appImageMobile:first-child,
-    .appImageMobile:nth-of-type(2) {
-      grid-row: 2;
-    }
-
     .appImageMobile:last-child {
       grid-column: 1 / 3;
       justify-self: center;
@@ -47,14 +42,13 @@ const StyledImgContainer = styled.div`
   }
 
   @media (max-width: 850px) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5rem;
 
-    .appImageMobile:first-child {
-      grid-row: 1;
-    }
-
-    .appImageMobile:last-child {
-      grid-row: 3;
+    .appImageMobile {
+      margin: 2.5rem 0;
     }
   }
 `;
