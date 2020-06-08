@@ -8,58 +8,22 @@ function ScreenShots() {
   const imgData = useStaticQuery(graphql`
     query AppImages {
       chartImage: file(relativePath: { eq: "Chart.png" }) {
-        id
-        childImageSharp {
-          fluid(pngQuality: 100, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
+        ...fluidImage
       }
       chartImageMobile: file(relativePath: { eq: "MobChart4x.png" }) {
-        id
-        childImageSharp {
-          fluid(quality: 100, maxWidth: 350) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
+        ...fluidImageMobile
       }
       activityImage: file(relativePath: { eq: "Activity.png" }) {
-        id
-        childImageSharp {
-          fluid(pngQuality: 100, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
+        ...fluidImage
       }
       activityImageMobile: file(relativePath: { eq: "MobActivity4x.png" }) {
-        id
-        childImageSharp {
-          fluid(quality: 100, maxWidth: 350) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
+        ...fluidImageMobile
       }
       settingsImage: file(relativePath: { eq: "Settings.png" }) {
-        id
-        childImageSharp {
-          fluid(quality: 100, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
+        ...fluidImage
       }
       settingsImageMobile: file(relativePath: { eq: "MobSettings4x.png" }) {
-        id
-        childImageSharp {
-          fluid(pngQuality: 100, maxWidth: 350) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
+        ...fluidImageMobile
       }
     }
   `);
@@ -97,3 +61,25 @@ function ScreenShots() {
 }
 
 export default ScreenShots;
+
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(pngQuality: 100, maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluidLimitPresentationSize
+      }
+    }
+  }
+`;
+
+export const fluidImageMobile = graphql`
+  fragment fluidImageMobile on File {
+    childImageSharp {
+      fluid(quality: 100, maxWidth: 350) {
+        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluidLimitPresentationSize
+      }
+    }
+  }
+`;
