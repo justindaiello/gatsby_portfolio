@@ -16,10 +16,10 @@ function ScreenShots() {
           }
         }
       }
-      chartImageMobile: file(relativePath: { eq: "MobileChart.png" }) {
+      chartImageMobile: file(relativePath: { eq: "MobChart4x.png" }) {
         id
         childImageSharp {
-          fluid(pngQuality: 100, maxWidth: 375) {
+          fluid(quality: 100, maxWidth: 350) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
@@ -37,7 +37,7 @@ function ScreenShots() {
       activityImageMobile: file(relativePath: { eq: "MobileActivity.png" }) {
         id
         childImageSharp {
-          fluid(pngQuality: 100, maxWidth: 375) {
+          fluid(quality: 100, maxWidth: 375) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
@@ -46,7 +46,7 @@ function ScreenShots() {
       settingsImage: file(relativePath: { eq: "Settings.png" }) {
         id
         childImageSharp {
-          fluid(pngQuality: 100, maxWidth: 1200) {
+          fluid(quality: 100, maxWidth: 1200) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
