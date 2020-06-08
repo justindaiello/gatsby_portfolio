@@ -6,6 +6,7 @@ const StyledHeader = styled.header`
   justify-content: flex-start;
   align-items: center;
   padding: 2rem;
+  z-index: 99;
 
   @media (max-width: 600px) {
     position: relative;
