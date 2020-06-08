@@ -189,4 +189,4 @@ const StyledImageGrid = styled.div`
   }
 `;
 
-export { StyledImageGrid, StyledLogo };
+export { StyledImageGrid };
