@@ -64,35 +64,34 @@ function ScreenShots() {
     }
   `);
 
-  const chartSources = [
-    imgData.chartImage.childImageSharp.fluid,
-    {
-      ...imgData.chartImageMobile.childImageSharp.fluid,
-      media: '(max-width: 999px)',
-    },
-  ];
-
-  const activitySources = [
-    imgData.activityImage.childImageSharp.fluid,
-    {
-      ...imgData.activityImageMobile.childImageSharp.fluid,
-      media: '(max-width: 999px)',
-    },
-  ];
-
-  const settingsSources = [
-    imgData.settingsImage.childImageSharp.fluid,
-    {
-      ...imgData.settingsImageMobile.childImageSharp.fluid,
-      media: '(max-width: 999px)',
-    },
-  ];
-
   return (
     <StyledImgContainer>
-      <Img fluid={chartSources} className="appImage" loading="eager" />
-      <Img fluid={activitySources} className="appImage" />
-      <Img fluid={settingsSources} className="appImage" />
+      <Img
+        fluid={imgData.chartImage.childImageSharp.fluid}
+        className="appImage"
+        loading="eager"
+      />
+      <Img
+        fluid={imgData.activityImage.childImageSharp.fluid}
+        className="appImage"
+      />
+      <Img
+        fluid={imgData.settingsImage.childImageSharp.fluid}
+        className="appImage"
+      />
+      <Img
+        fluid={imgData.chartImageMobile.childImageSharp.fluid}
+        className="appImageMobile"
+        loading="eager"
+      />
+      <Img
+        fluid={imgData.activityImageMobile.childImageSharp.fluid}
+        className="appImageMobile"
+      />
+      <Img
+        fluid={imgData.settingsImageMobile.childImageSharp.fluid}
+        className="appImageMobile"
+      />
     </StyledImgContainer>
   );
 }
