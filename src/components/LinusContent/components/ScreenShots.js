@@ -34,10 +34,10 @@ function ScreenShots() {
           }
         }
       }
-      activityImageMobile: file(relativePath: { eq: "MobileActivity.png" }) {
+      activityImageMobile: file(relativePath: { eq: "MobActivity4x.png" }) {
         id
         childImageSharp {
-          fluid(quality: 100, maxWidth: 375) {
+          fluid(quality: 100, maxWidth: 350) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
@@ -52,10 +52,10 @@ function ScreenShots() {
           }
         }
       }
-      settingsImageMobile: file(relativePath: { eq: "MobileSettings.png" }) {
+      settingsImageMobile: file(relativePath: { eq: "MobSettings4x.png" }) {
         id
         childImageSharp {
-          fluid(pngQuality: 100, maxWidth: 375) {
+          fluid(pngQuality: 100, maxWidth: 350) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }

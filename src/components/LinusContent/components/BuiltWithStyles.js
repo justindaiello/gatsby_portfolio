@@ -13,7 +13,7 @@ const rotate = keyframes`
 const StyledImageGrid = styled.div`
   display: grid;
   max-width: 1200px;
-  margin: 5rem auto;
+  margin: 5rem auto 0;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 8rem 0;
   background: ${(props) => props.theme.accent};
