@@ -1,77 +1,48 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import { StyledImageGrid, StyledLogo } from './BuiltWithStyles';
-
-import Gitlab from '../../../images/Gitlab.png';
-import Gitlab4x from '../../../images/Gitlab4x.png';
-import JS from '../../../images/JS.png';
-import JS4x from '../../../images/JS4x.png';
-import ReactImg from '../../../images/React.png';
-import ReactImg4x from '../../../images/React4x.png';
-import Redux from '../../../images/Redux.png';
-import Redux4x from '../../../images/Redux4x.png';
-import TS from '../../../images/TS.png';
-import TS4x from '../../../images/TS4x.png';
-import Cypress from '../../../images/Cypress.png';
-import Cypress4x from '../../../images/Cypress4x.png';
-import Jest from '../../../images/Jest.png';
-import Jest4x from '../../../images/Jest4x.png';
-
-const images = [
-  { id: 1, src: JS, srcSet: `${JS} 1x, ${JS4x} 4x`, alt: 'JavaScript' },
-  {
-    id: 2,
-    src: ReactImg,
-    srcSet: `${ReactImg} 1x, ${ReactImg4x} 4x`,
-    alt: 'React',
-  },
-  {
-    id: 3,
-    src: Redux,
-    srcSet: `${Redux} 1x, ${Redux4x} 4x`,
-    alt: 'Redux',
-  },
-  {
-    id: 4,
-    src: TS,
-    srcSet: `${TS} 1x, ${TS4x} 4x`,
-    alt: 'TypeScript',
-  },
-  {
-    id: 5,
-    src: Gitlab,
-    srcSet: `${Gitlab} 1x, ${Gitlab4x} 4x`,
-    alt: 'Gitlab',
-  },
-  {
-    id: 6,
-    src: Cypress,
-    srcSet: `${Cypress} 1x, ${Cypress4x} 4x`,
-    alt: 'Cypress',
-  },
-  {
-    id: 7,
-    src: Jest,
-    srcSet: `${Jest} 1x, ${Jest4x} 4x`,
-    alt: 'Jest',
-  },
-];
+import { StyledImageGrid } from './BuiltWithStyles';
 
 function BuiltWith() {
+  const imgData = useStaticQuery(graphql`
+    query LogoImages {
+      jsImage: file(relativePath: { eq: "JS4x.png" }) {
+        ...fixedImage
+      }
+      reactImage: file(relativePath: { eq: "React4x.png" }) {
+        ...fixedImage
+      }
+      reduxImage: file(relativePath: { eq: "Redux4x.png" }) {
+        ...fixedImage
+      }
+      tsImage: file(relativePath: { eq: "TS4x.png" }) {
+        ...fixedImage
+      }
+      gitLabImage: file(relativePath: { eq: "Gitlab4x.png" }) {
+        ...fixedImage
+      }
+      cyImage: file(relativePath: { eq: "Cypress4x.png" }) {
+        ...fixedImage
+      }
+      jestImage: file(relativePath: { eq: "Jest4x.png" }) {
+        ...fixedImage
+      }
+    }
+  `);
+
   return (
     <>
       <StyledImageGrid>
         <div className="logos">
-          {images.map((image) => (
-            <StyledLogo
-              src={image.src}
-              srcSet={image.srcSet}
-              alt={image.alt}
-              key={image.id}
+          {Object.entries(imgData).map(([key, value]) => (
+            <Img
+              fixed={value.childImageSharp.fixed}
+              key={key}
+              className="img"
             />
           ))}
         </div>
-        <span className="divider" />
         <hr className="mobileDivider" />
         <div className="info">
           <h2>Linus is a high-yield alternative to cash deposit accounts</h2>
@@ -108,3 +79,14 @@ function BuiltWith() {
 }
 
 export default BuiltWith;
+
+export const fixedImage = graphql`
+  fragment fixedImage on File {
+    id
+    childImageSharp {
+      fixed(quality: 100, height: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`;

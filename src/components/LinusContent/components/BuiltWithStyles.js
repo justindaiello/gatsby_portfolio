@@ -14,8 +14,8 @@ const StyledImageGrid = styled.div`
   display: grid;
   max-width: 1200px;
   margin: 5rem auto 0;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 8rem 0;
+  grid-template-columns: 475px auto;
+  grid-gap: 8rem 4rem;
   background: ${(props) => props.theme.accent};
   padding: 2rem;
   border-radius: 12px;
@@ -29,20 +29,13 @@ const StyledImageGrid = styled.div`
     font-size: 2.2rem;
   }
 
-  .divider {
-    position: absolute;
-    height: 90%;
-    border-left: 1px solid ${(props) => props.theme.text};
-    left: 46%;
-    top: 5%;
-  }
-
   .mobileDivider {
     display: none;
   }
 
   .info {
     text-align: left;
+    padding-right: 3rem;
 
     p,
     ul {
@@ -55,17 +48,18 @@ const StyledImageGrid = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 3rem 2rem;
     align-self: center;
+    border-right: 1px solid ${(props) => props.theme.text};
 
-    img {
+    .img {
       justify-self: center;
     }
 
-    img:first-of-type {
+    .img:first-of-type {
       grid-row: 1;
       grid-column: 2;
     }
 
-    img:nth-of-type(2) {
+    .img:nth-of-type(2) {
       grid-row: 1;
       grid-column: 3;
       cursor: pointer;
@@ -75,7 +69,7 @@ const StyledImageGrid = styled.div`
       }
     }
 
-    img:nth-of-type(3) {
+    .img:nth-of-type(3) {
       grid-row: 2;
       grid-column: 1 / 3;
       cursor: pointer;
@@ -85,22 +79,22 @@ const StyledImageGrid = styled.div`
       }
     }
 
-    img:nth-of-type(4) {
+    .img:nth-of-type(4) {
       grid-row: 2;
       grid-column: 2 / 4;
     }
 
-    img:nth-of-type(5) {
+    .img:nth-of-type(5) {
       grid-row: 2;
       grid-column: 3 / 5;
     }
 
-    img:nth-of-type(6) {
+    .img:nth-of-type(6) {
       grid-row: 3;
       grid-column: 2;
     }
 
-    img:last-of-type {
+    .img:last-of-type {
       grid-row: 3;
       grid-column: 3;
     }
@@ -141,6 +135,7 @@ const StyledImageGrid = styled.div`
     .logos {
       grid-gap: 2rem 4rem;
       margin: 0 auto 4rem;
+      border: none;
     }
 
     .info {
@@ -160,43 +155,38 @@ const StyledImageGrid = styled.div`
     .logos {
       grid-template-columns: repeat(2, 1fr);
 
-      img:first-of-type {
+      .img:first-of-type {
         grid-column: 1;
       }
 
-      img:nth-of-type(2) {
+      .img:nth-of-type(2) {
         grid-column: 2;
       }
 
-      img:nth-of-type(3) {
+      .img:nth-of-type(3) {
         grid-column: 1;
       }
 
-      img:nth-of-type(4) {
+      .img:nth-of-type(4) {
         grid-column: 2;
       }
 
-      img:nth-of-type(5) {
+      .img:nth-of-type(5) {
         grid-row: 4;
         grid-column: 1;
       }
 
-      img:nth-of-type(6) {
+      .img:nth-of-type(6) {
         grid-row: 4;
         grid-column: 2;
       }
 
-      img:last-of-type {
+      .img:last-of-type {
         grid-row: 5;
         grid-column: 1 / 3;
       }
     }
   }
-`;
-
-const StyledLogo = styled.img`
-  max-width: 100px;
-  max-height: 100px;
 `;
 
 export { StyledImageGrid, StyledLogo };
