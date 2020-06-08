@@ -12,33 +12,48 @@ const StyledImgContainer = styled.div`
     box-shadow: ${(props) => props.theme.boxShadow};
   }
 
+  .appImageMobile {
+    display: none;
+  }
+
   @media (max-width: 999px) {
     grid-template-columns: repeat(2, 1fr);
 
     .appImage {
+      display: none;
+    }
+
+    .appImageMobile {
+      display: block;
+      border-radius: 12px;
+      box-shadow: ${(props) => props.theme.boxShadow};
+    }
+
+    .appImageMobile {
       justify-self: center;
       width: 375px;
       image-rendering: crisp-edges;
     }
 
-    .appImage:last-child,
-    .appImage:first-child {
-      grid-row: 1;
+    .appImageMobile:first-child,
+    .appImageMobile:nth-of-type(2) {
+      grid-row: 2;
     }
 
-    .appImage:nth-of-type(2) {
+    .appImageMobile:last-child {
       grid-column: 1 / 3;
+      justify-self: center;
     }
   }
 
   @media (max-width: 850px) {
     grid-template-columns: 1fr;
 
-    .appImage:first-child {
+    .appImageMobile:first-child {
       grid-row: 1;
     }
 
-    .appImage:last-child {
+    .appImageMobile:last-child {
       grid-row: 3;
     }
   }
