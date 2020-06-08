@@ -5,7 +5,7 @@ const StyledImgContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 5rem 0;
-  margin: 10rem auto;
+  margin: 5rem auto;
 
   .appImage {
     border-radius: 12px;
