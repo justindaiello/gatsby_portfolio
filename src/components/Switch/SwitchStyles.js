@@ -12,6 +12,7 @@ const StyledSwitch = styled.button`
   border-radius: 19px;
   z-index: 99;
   box-shadow: ${(props) => props.theme.lightBoxShadow};
+  cursor: pointer;
 
   &:after {
     content: '';
