@@ -49,7 +49,7 @@ function Hero() {
             <p>
               Hi! I'm a Software Engineer residing in Asheville, NC. I love to
               create pixel-perfect user interfaces leveraging JavaScript, React,
-              Typescript and GraphQL.
+              TypeScript and GraphQL.
             </p>
             <StyledList>
               <li>
