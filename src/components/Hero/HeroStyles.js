@@ -36,8 +36,12 @@ const StyledHero = styled.div`
     display: none;
   }
 
+  .desktopSelfie {
+    margin-bottom: 0;
+  }
+
   h1 {
-    margin-bottom: 2rem;
+    margin: 1rem 0;
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: 300;
@@ -62,7 +66,7 @@ const StyledHero = styled.div`
   }
 
   @media (max-width: 600px) {
-    top: 8%;
+    top: 7%;
 
     .desktopSelfie {
       display: none;
