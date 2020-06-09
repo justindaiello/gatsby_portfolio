@@ -7,7 +7,7 @@ function GoAdventure() {
     <GoAdventureDiv>
       <div className="green">
         <ProjectLink
-          href="https://goadventure-next-prod.herokuapp.com/"
+          href="https://github.com/justindaiello/react_store"
           target="_blank"
           rel="noopener noreferrer"
           variant="yellow"
