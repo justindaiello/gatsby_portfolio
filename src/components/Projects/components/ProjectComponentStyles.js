@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const LinusAppDiv = styled.div`
   display: grid;
@@ -130,7 +130,7 @@ const linkStyles = css`
 const ProjectLink = styled.a`
   ${linkStyles}
 `;
-const GatsbyLink = styled(Link)`
+const GatsbyLink = styled(AniLink)`
   ${linkStyles}
 `;
 

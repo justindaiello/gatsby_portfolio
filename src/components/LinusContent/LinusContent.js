@@ -8,7 +8,14 @@ import ScreenShots from './components/ScreenShots';
 function LinusContent() {
   return (
     <ContentContainer>
-      <GatsbyLink to="/" className="homeLink">
+      <GatsbyLink
+        swipe
+        direction="right"
+        top="entry"
+        entryOffset={100}
+        to="/"
+        className="homeLink"
+      >
         Home
       </GatsbyLink>
       <h1>Linus App</h1>
