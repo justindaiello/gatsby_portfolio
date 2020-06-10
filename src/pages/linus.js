@@ -15,11 +15,11 @@ function TransitionSpring({ children }) {
         return (
           <Spring
             to={{
-              transform: `translateX(${mount ? 0 : '100%'})`,
+              transform: `translateX(${mount ? 0 : '75%'})`,
               opacity: mount ? 1 : 0,
             }}
             config={{
-              duration: seconds * 650,
+              duration: seconds * 500,
             }}
           >
             {(props) => <div style={props}>{children}</div>}

@@ -137,6 +137,7 @@ const StyledImageGrid = styled.div`
     .info {
       text-align: center;
       margin: 4rem auto 0;
+      padding-right: 0;
 
       ul {
         display: inline-block;
