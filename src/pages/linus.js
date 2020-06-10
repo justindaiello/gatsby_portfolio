@@ -16,11 +16,10 @@ function TransitionSpring({ children }) {
           <Spring
             native
             to={{
-              transform: `translateX(${mount ? 0 : '75%'})`,
               opacity: mount ? 1 : 0,
             }}
             config={{
-              duration: seconds * 500,
+              duration: seconds * 650,
             }}
           >
             {(props) => <animated.div style={props}>{children}</animated.div>}
