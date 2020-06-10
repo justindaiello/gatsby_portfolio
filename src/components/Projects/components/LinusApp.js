@@ -1,19 +1,13 @@
 import React from 'react';
-import { LinusAppDiv, GatsbyLink } from './ProjectComponentStyles';
+import { LinusAppDiv } from './ProjectComponentStyles';
+
+import AnimatedLink from '../../AnimatedLink';
 
 function LinusApp() {
   return (
     <LinusAppDiv>
       <div className="purple">
-        <GatsbyLink
-          swipe
-          top="exit"
-          direction="left"
-          entryOffset={100}
-          to="/linus"
-        >
-          Linus App
-        </GatsbyLink>
+        <AnimatedLink to="/linus" text="Linus App" />
       </div>
       <div className="matchBody" />
     </LinusAppDiv>

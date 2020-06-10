@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import styled from 'styled-components';
+import { handleUnderline } from '../../../functions/functions';
 
 const LinusAppDiv = styled.div`
   display: grid;
@@ -69,7 +69,7 @@ const AprToApyDiv = styled.div`
   }
 `;
 
-const linkStyles = css`
+const ProjectLink = styled.a`
   text-decoration: none;
   color: ${(props) => props.theme.text};
   text-transform: uppercase;
@@ -127,36 +127,10 @@ const linkStyles = css`
   }
 `;
 
-const ProjectLink = styled.a`
-  ${linkStyles}
-`;
-const GatsbyLink = styled(AniLink)`
-  ${linkStyles}
-`;
-
-//dynamically render underline for links based on props.variant
-function handleUnderline(variant) {
-  switch (variant) {
-    case 'purple': {
-      return '#8581a3';
-    }
-    case 'yellow': {
-      return '#ecbf5b';
-    }
-    case 'green': {
-      return '#86aba3';
-    }
-    default: {
-      return '#87b3c7';
-    }
-  }
-}
-
 export {
   LinusAppDiv,
   LinusMarketingDiv,
   GoAdventureDiv,
   ProjectLink,
   AprToApyDiv,
-  GatsbyLink,
 };
