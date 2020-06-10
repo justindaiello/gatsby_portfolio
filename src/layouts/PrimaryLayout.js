@@ -40,9 +40,9 @@ const PrimaryLayout = ({ children }) => {
 
   return (
     <ThemeProvider theme={toggleTheme()}>
+      <GlobalStyle />
       <StyledMain>
         <Switch handleClick={handleThemeChange} title="Switch Theme" />
-        <GlobalStyle />
         {children}
         <StyledImg src={Polygon} />
       </StyledMain>
