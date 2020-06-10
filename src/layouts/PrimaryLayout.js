@@ -11,12 +11,6 @@ import actions from '../context/actions';
 
 import 'normalize.css';
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: ${(props) => props.theme.body}
-  }
-`;
-
 const PrimaryLayout = ({ children }) => {
   const dispatch = useDispatch();
   const { hasDarkTheme } = useSelector((state) => state);
@@ -40,7 +34,6 @@ const PrimaryLayout = ({ children }) => {
 
   return (
     <ThemeProvider theme={toggleTheme()}>
-      <GlobalStyle />
       <StyledMain>
         <Switch handleClick={handleThemeChange} title="Switch Theme" />
         {children}
