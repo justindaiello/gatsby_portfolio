@@ -22,6 +22,7 @@
     "gatsby-plugin-react-helmet": "^3.3.1",
     "gatsby-plugin-sharp": "^2.6.10",
     "gatsby-plugin-styled-components": "^3.3.1",
+    "gatsby-plugin-transition-link": "^1.18.0",
     "gatsby-source-filesystem": "^2.3.10",
     "gatsby-transformer-sharp": "^2.5.4",
     "normalize.css": "^8.0.1",
@@ -30,6 +31,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "react-redux": "^7.2.0",
+    "react-spring": "^8.0.27",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
