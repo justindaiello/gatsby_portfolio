@@ -11,11 +11,11 @@ import actions from '../context/actions';
 
 import 'normalize.css';
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: ${(props) => props.theme.body}
-  }
-`;
+// const GlobalStyle = createGlobalStyle`
+//   body {
+//     background: ${(props) => props.theme.body}
+//   }
+// `;
 
 const PrimaryLayout = ({ children }) => {
   const dispatch = useDispatch();
@@ -40,7 +40,7 @@ const PrimaryLayout = ({ children }) => {
 
   return (
     <ThemeProvider theme={toggleTheme()}>
-      <GlobalStyle />
+      {/* <GlobalStyle /> */}
       <StyledMain>
         <Switch handleClick={handleThemeChange} title="Switch Theme" />
         {children}
