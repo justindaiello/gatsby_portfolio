@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spring } from 'react-spring/renderprops';
+import { Spring, animated } from 'react-spring/renderprops';
 import { TransitionState } from 'gatsby-plugin-transition-link';
 
 import SEO from '../components/SEO/SEO';
@@ -14,6 +14,7 @@ function TransitionSpring({ children }) {
 
         return (
           <Spring
+            native
             to={{
               transform: `translateX(${mount ? 0 : '75%'})`,
               opacity: mount ? 1 : 0,
@@ -22,7 +23,7 @@ function TransitionSpring({ children }) {
               duration: seconds * 500,
             }}
           >
-            {(props) => <div style={props}>{children}</div>}
+            {(props) => <animated.div style={props}>{children}</animated.div>}
           </Spring>
         );
       }}
