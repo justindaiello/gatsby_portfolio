@@ -1,16 +1,14 @@
 import React from 'react';
 
-import { ContentContainer, StyledLink } from './LinusStyles';
-import { GatsbyLink } from '../Projects/components/ProjectComponentStyles';
+import AnimatedLink from '../AnimatedLink';
 import BuiltWith from './components/BuiltWith';
 import ScreenShots from './components/ScreenShots';
+import { ContentContainer, StyledLink } from './LinusStyles';
 
 function LinusContent() {
   return (
     <ContentContainer>
-      <GatsbyLink to="/" className="homeLink">
-        Home
-      </GatsbyLink>
+      <AnimatedLink to="/" text="Home" className="homeLink" />
       <h1>Linus App</h1>
       <StyledLink
         variant="blue"

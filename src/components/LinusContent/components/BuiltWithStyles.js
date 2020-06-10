@@ -63,10 +63,6 @@ const StyledImageGrid = styled.div`
       grid-row: 1;
       grid-column: 3;
       cursor: pointer;
-
-      &:hover {
-        animation: ${rotate} 2s linear infinite;
-      }
     }
 
     .img:nth-of-type(3) {
