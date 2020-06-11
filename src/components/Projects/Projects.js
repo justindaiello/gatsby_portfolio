@@ -6,6 +6,7 @@ import LinusApp from './components/LinusApp';
 import LinusMarketing from './components/LinusMarketing';
 import GoAdventure from './components/GoAdventure';
 import AprToApy from './components/AprToApy';
+import Portfolio from './components/Portfolio';
 
 function Projects({ projectRef }) {
   return (
@@ -14,6 +15,7 @@ function Projects({ projectRef }) {
       <LinusMarketing />
       <GoAdventure />
       <AprToApy />
+      <Portfolio />
     </StyledContainer>
   );
 }
