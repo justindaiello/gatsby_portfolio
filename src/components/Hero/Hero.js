@@ -94,4 +94,4 @@ function Hero() {
 export default Hero;
 
 const resumeLink =
-  'https://res.cloudinary.com/reactstore/image/upload/v1591036809/resume/aiello_resume_wet6ea.pdf';
+  'https://res.cloudinary.com/reactstore/image/upload/v1591881539/resume/aiello_resume_xdjt0i.pdf';
