@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledImg, StyledMain } from './LayoutStyles';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 
 import Polygon from '../images/Polygon.svg';
