@@ -1,7 +1,7 @@
 # Portfolio
 
 - **Built With:**
-  -React/Gatsby  
+   -React/Gatsby  
    -Redux/Redux Toolkit  
    -Styled Components  
    -GraphQL
