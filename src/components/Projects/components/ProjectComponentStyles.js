@@ -69,6 +69,23 @@ const AprToApyDiv = styled.div`
   }
 `;
 
+const PortfolioDiv = styled.div`
+  display: grid;
+  grid-template-columns: 60% auto;
+  grid-template-rows: 200px;
+
+  .blue {
+    background: ${(props) => props.theme.accent};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
 const ProjectLink = styled.a`
   text-decoration: none;
   color: ${(props) => props.theme.text};
@@ -133,4 +150,5 @@ export {
   GoAdventureDiv,
   ProjectLink,
   AprToApyDiv,
+  PortfolioDiv,
 };
