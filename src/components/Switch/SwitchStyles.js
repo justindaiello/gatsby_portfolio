@@ -42,7 +42,7 @@ const StyledSwitch = styled.button`
     width: 19px;
     left: 3px;
     bottom: 3px;
-    background: #393939;
+    background: #111219;
     transition: 0.5s;
     border-radius: 100%;
   }
