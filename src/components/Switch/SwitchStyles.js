@@ -8,7 +8,10 @@ const StyledSwitch = styled.button`
   width: 45px;
   height: 25px;
   border: none;
-  ${(props) => (props.isOn ? `background: #393939` : `background: #F9F9F8`)};
+  ${(props) =>
+    props.hasDarkTheme === 'dark'
+      ? `background: #F9F9F8`
+      : `background: #393939`};
   border-radius: 19px;
   z-index: 99;
   box-shadow: ${(props) => props.theme.lightBoxShadow};
