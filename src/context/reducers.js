@@ -2,9 +2,8 @@ import { createReducer } from '@reduxjs/toolkit';
 import actions from './actions';
 
 const initialState = {
-  isOn: false,
   isHidden: true,
-  hasDarkTheme: true,
+  hasDarkTheme: 'dark',
 };
 
 export default createReducer(initialState, {
@@ -12,11 +11,7 @@ export default createReducer(initialState, {
     state.isHidden = !state.isHidden;
   },
 
-  [actions.setHasDarkTheme]: (state) => {
-    state.hasDarkTheme = !state.hasDarkTheme;
-  },
-
-  [actions.setIsOn]: (state) => {
-    state.isOn = !state.isOn;
+  [actions.setHasDarkTheme]: (state, action) => {
+    state.hasDarkTheme = action.payload;
   },
 });
