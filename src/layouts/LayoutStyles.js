@@ -22,4 +22,9 @@ const StyledImg = styled.img`
   }
 `;
 
-export { StyledImg, StyledMain };
+const StyledPlaceholder = styled.div`
+  background: #111219;
+  height: 100vh;
+`;
+
+export { StyledImg, StyledMain, StyledPlaceholder };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledImg, StyledMain } from './LayoutStyles';
+import { StyledImg, StyledMain, StyledPlaceholder } from './LayoutStyles';
 import { ThemeProvider } from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -14,13 +14,26 @@ import 'normalize.css';
 const PrimaryLayout = ({ children }) => {
   const dispatch = useDispatch();
   const { hasDarkTheme } = useSelector((state) => state);
+  const hasWindow = typeof window !== 'undefined';
+  const themeCookie = hasWindow && window.localStorage.getItem('themeCookie');
+  const [isMounted, setIsMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    if (themeCookie) {
+      dispatch(actions.setHasDarkTheme(themeCookie));
+    } else {
+      hasWindow && window.localStorage.setItem('themeCookie', 'dark');
+      dispatch(actions.setHasDarkTheme('dark'));
+    }
+    setIsMounted(true);
+  }, [themeCookie, dispatch, hasWindow]);
 
   function toggleTheme() {
     switch (hasDarkTheme) {
-      case true: {
+      case 'dark': {
         return darkTheme;
       }
-      case false: {
+      case 'light': {
         return lightTheme;
       }
       default:
@@ -29,11 +42,22 @@ const PrimaryLayout = ({ children }) => {
   }
 
   function handleThemeChange() {
-    dispatch(actions.setHasDarkTheme());
+    if (hasDarkTheme === 'dark') {
+      hasWindow && window.localStorage.setItem('themeCookie', 'light');
+      dispatch(actions.setHasDarkTheme('light'));
+    } else {
+      hasWindow && window.localStorage.setItem('themeCookie', 'dark');
+      dispatch(actions.setHasDarkTheme('dark'));
+    }
+  }
+
+  if (!isMounted) {
+    return <StyledPlaceholder />;
   }
 
   return (
     <ThemeProvider theme={toggleTheme()}>
+      {console.log(hasDarkTheme)}
       <StyledMain>
         <Switch handleClick={handleThemeChange} title="Switch Theme" />
         {children}
