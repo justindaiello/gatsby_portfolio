@@ -13,6 +13,7 @@ const showHidden = keyframes`
 
 const HeroContainer = styled.div`
   height: 100vh;
+  position: relative;
 `;
 
 const StyledImg = styled(Img)`
@@ -24,7 +25,7 @@ const StyledImg = styled(Img)`
 const StyledHero = styled.div`
   position: absolute;
   width: 100%;
-  top: 8%;
+  top: 18%;
   display: flex;
   flex-direction: column;
   justify-content: center;
