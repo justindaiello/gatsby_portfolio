@@ -14,13 +14,19 @@ import 'normalize.css';
 const PrimaryLayout = ({ children }) => {
   const dispatch = useDispatch();
   const { hasDarkTheme } = useSelector((state) => state);
+  const hasWindow = typeof window !== 'undefined';
+  const themeCookie = hasWindow && window.localStorage.getItem('themeCookie');
+
+  React.useEffect(() => {
+    themeCookie && dispatch(actions.setHasDarkTheme(themeCookie));
+  }, [themeCookie, dispatch]);
 
   function toggleTheme() {
     switch (hasDarkTheme) {
-      case true: {
+      case 'dark': {
         return darkTheme;
       }
-      case false: {
+      case 'light': {
         return lightTheme;
       }
       default:
@@ -29,11 +35,18 @@ const PrimaryLayout = ({ children }) => {
   }
 
   function handleThemeChange() {
-    dispatch(actions.setHasDarkTheme());
+    if (hasDarkTheme === 'dark') {
+      hasWindow && window.localStorage.setItem('themeCookie', 'light');
+      dispatch(actions.setHasDarkTheme('light'));
+    } else {
+      hasWindow && window.localStorage.setItem('themeCookie', 'dark');
+      dispatch(actions.setHasDarkTheme('dark'));
+    }
   }
 
   return (
     <ThemeProvider theme={toggleTheme()}>
+      {console.log(hasDarkTheme)}
       <StyledMain>
         <Switch handleClick={handleThemeChange} title="Switch Theme" />
         {children}
