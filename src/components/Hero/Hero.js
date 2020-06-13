@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { HeroContainer, StyledHero, StyledList, StyledImg } from './HeroStyles';
+import FloatingShapes from './components/FloatingShapes';
 
 function Hero() {
   const { isHidden } = useSelector((state) => state);
@@ -30,6 +31,7 @@ function Hero() {
 
   return (
     <HeroContainer>
+      <FloatingShapes isHidden={isHidden} />
       <StyledHero>
         <figure className="desktopSelfie">
           <StyledImg
