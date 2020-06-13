@@ -57,7 +57,6 @@ const PrimaryLayout = ({ children }) => {
 
   return (
     <ThemeProvider theme={toggleTheme()}>
-      {console.log(hasDarkTheme)}
       <StyledMain>
         <Switch handleClick={handleThemeChange} title="Switch Theme" />
         {children}
