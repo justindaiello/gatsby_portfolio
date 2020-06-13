@@ -1,32 +1,51 @@
 import React from 'react';
+import { string, object, bool } from 'prop-types';
 
 import { StyledSvg } from './SVGStyles';
 
+const propTypes = {
+  top: string,
+  left: string,
+  width: string,
+  color: string,
+  isHidden: bool,
+  isMobile: bool,
+  height: string,
+  viewBox: string,
+  children: object,
+  animation: string,
+};
+
 function SVG({
-  color,
   top,
   left,
   width,
-  children,
-  viewBox,
-  isHidden,
-  long,
+  color,
   height,
+  viewBox,
+  isMobile,
+  children,
+  isHidden,
+  animation,
 }) {
   return (
     <StyledSvg
       top={top}
-      long={long}
+      role="img"
       left={left}
       color={color}
       width={width}
       height={height}
       viewBox={viewBox}
+      isMobile={isMobile}
       isHidden={isHidden}
+      animation={animation}
     >
       {children}
     </StyledSvg>
   );
 }
+
+SVG.propTypes = propTypes;
 
 export default SVG;
