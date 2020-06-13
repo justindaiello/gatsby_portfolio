@@ -115,7 +115,6 @@ function FloatingShapes({ isHidden }) {
         left="45%"
         height="150px"
         viewBox="0 0 200 100"
-        animation="long"
         isMobile
       >
         <HarryPotter />
@@ -152,7 +151,6 @@ function FloatingShapes({ isHidden }) {
         left="5%"
         width="60px"
         color="#ecbf5b"
-        animation="medium"
         isMobile
       >
         <Square />
@@ -164,6 +162,7 @@ function FloatingShapes({ isHidden }) {
         left="78%"
         width="80px"
         isMobile
+        animation="long"
       >
         <Circle r={10} cy={10} cx={10} />
       </SVG>
