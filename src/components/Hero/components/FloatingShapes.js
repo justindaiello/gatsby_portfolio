@@ -30,8 +30,8 @@ function FloatingShapes({ isHidden }) {
       </SVG>
       <SVG
         viewBox="0 0 30 30"
-        top="52%"
-        left="34%"
+        top="55%"
+        left="36%"
         width="60px"
         color="#87B3C7"
         isHidden={!isHidden}
