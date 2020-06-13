@@ -2,36 +2,36 @@ import styled, { keyframes } from 'styled-components';
 
 const float = keyframes`
   0% {
-		transform: translatey(-40px);
+		transform: translateY(-40px);
 	}
 	50% {
-		transform: translatey(0px);
+		transform: translateY(0px);
 	}
 	100% {
-		transform: translatey(-40px);
+		transform: translateY(-40px);
 	}
 `;
 const floatMed = keyframes`
   0% {
-		transform: translatey(0px);
+		transform: translateY(0px);
 	}
 	50% {
-		transform: translatey(-70px);
+		transform: translateY(-70px);
 	}
 	100% {
-		transform: translatey(0px);
+		transform: translateY(0px);
 	}
 `;
 
 const floatLong = keyframes`
   0% {
-		transform: translatey(0px);
+		transform: translateY(0px);
 	}
 	50% {
-		transform: translatey(-90px);
+		transform: translateY(-90px);
 	}
 	100% {
-		transform: translatey(0px);
+		transform: translateY(0px);
 	}
 `;
 
