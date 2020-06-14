@@ -1,5 +1,13 @@
 import React from 'react';
+import { string } from 'prop-types';
+
 import { StyledLink } from './AnimatedLinkStyles';
+
+const propTypes = {
+  text: string,
+  to: string,
+  className: string,
+};
 
 function AnimatedLink({ text, to, className }) {
   return (
@@ -13,5 +21,7 @@ function AnimatedLink({ text, to, className }) {
     </StyledLink>
   );
 }
+
+AnimatedLink.propTypes = propTypes;
 
 export default AnimatedLink;
