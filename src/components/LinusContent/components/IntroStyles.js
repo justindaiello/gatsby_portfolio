@@ -75,7 +75,7 @@ const StyledIntroContainer = styled.div`
     }
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     margin: 7rem 2rem 0;
 
     .left {
