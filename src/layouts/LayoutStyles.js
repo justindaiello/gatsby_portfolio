@@ -16,7 +16,7 @@ const StyledImg = styled.img`
   z-index: 0;
   transform: rotate(10deg);
 
-  @media (max-width: 600px) {
+  @media (max-width: 1300px) {
     bottom: -445px;
     left: -500px;
   }

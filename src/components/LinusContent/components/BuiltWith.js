@@ -1,10 +1,11 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { object } from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import { StyledImageGrid } from './BuiltWithStyles';
 
-function BuiltWith() {
+function BuiltWith({ builtWithRef }) {
   const imgData = useStaticQuery(graphql`
     query LogoImages {
       jsImage: file(relativePath: { eq: "JS4x.png" }) {
@@ -33,7 +34,7 @@ function BuiltWith() {
 
   return (
     <>
-      <StyledImageGrid>
+      <StyledImageGrid ref={builtWithRef}>
         <div className="logos">
           {Object.entries(imgData).map(([key, value]) => (
             <Img
@@ -45,38 +46,25 @@ function BuiltWith() {
         </div>
         <hr className="mobileDivider" />
         <div className="info">
-          <h2>Linus is a high-yield alternative to cash deposit accounts</h2>
-          <p>Here are a few things I worked on:</p>
-          <ul>
-            <li>
-              Implemented the design and logic for an interactive deposit chart
-            </li>
-            <li>
-              Connected third party integrations for Stripe, Plaid and MapBox
-            </li>
-            <li>
-              Added to and helped manage business logic for the front-end API
-              client that interfaced with the back-end
-            </li>
-            <li>
-              Built the two-factor authentication UI with scannable QR code
-            </li>
-            <li>
-              Designed and implemented mobile responsiveness across the
-              application
-            </li>
-            <li>Wrote unit and end-to-end tests with Jest and Cypress</li>
-            <li>
-              Worked with back-end engineers to connect new features to the
-              front-end
-            </li>
-            <li>Added accessibility features throughout the application</li>
-          </ul>
+          <h1>Tech Stack</h1>
+          <p>
+            The front end of Linus is built using JavaScript, React, Redux,
+            TypeScript, and PostCSS. End-to-end and unit test coverage are
+            written using Cypress and Jest and the repository is hosted on
+            GitLab. Linus' front end also leverages React's hooks API to manage
+            stateful logic, Redux Toolkit to enforce Redux best practices, Immer
+            to manage immutable state, and React Spring to create animations and
+            transitions.
+          </p>
         </div>
       </StyledImageGrid>
     </>
   );
 }
+
+BuiltWith.propTypes = {
+  builtWithRef: object,
+};
 
 export default BuiltWith;
 

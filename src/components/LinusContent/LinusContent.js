@@ -7,11 +7,12 @@ import Intro from './components/Intro';
 import { ContentContainer } from './LinusStyles';
 
 function LinusContent() {
+  const builtWithRef = React.useRef(null);
   return (
     <ContentContainer>
       <AnimatedLink to="/" text="Home" className="homeLink" />
-      {/* <BuiltWith /> */}
-      <Intro />
+      <Intro builtWithRef={builtWithRef} />
+      <BuiltWith builtWithRef={builtWithRef} />
       <ScreenShots />
     </ContentContainer>
   );
