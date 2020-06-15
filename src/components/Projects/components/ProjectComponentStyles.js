@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { handleUnderline } from '../../../functions/functions';
+import { handleUnderline } from '../../../utils/functions';
 
 const LinusAppDiv = styled.div`
   display: grid;
