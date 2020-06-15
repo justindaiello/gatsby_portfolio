@@ -74,6 +74,14 @@ const StyledIntroContainer = styled.div`
       padding: 0 2rem;
     }
   }
+
+  @media (max-width: 400px) {
+    margin: 7rem 2rem 0;
+
+    .left {
+      text-align: center;
+    }
+  }
 `;
 
 const StyledLinkButton = styled.a`
