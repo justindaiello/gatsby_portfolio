@@ -148,6 +148,16 @@ const StyledImageGrid = styled.div`
   @media (max-width: 450px) {
     max-width: 350px;
 
+    .info {
+      p {
+        text-align: left;
+      }
+
+      h1 {
+        margin-bottom: 2rem;
+      }
+    }
+
     .logos {
       grid-template-columns: repeat(2, 1fr);
 

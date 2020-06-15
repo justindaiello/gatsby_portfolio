@@ -80,6 +80,10 @@ const StyledIntroContainer = styled.div`
 
     .left {
       text-align: center;
+
+      p {
+        text-align: left;
+      }
     }
   }
 `;
