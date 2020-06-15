@@ -16,17 +16,16 @@ const StyledImageGrid = styled.div`
   margin: 5rem auto 0;
   grid-template-columns: 475px auto;
   grid-gap: 8rem 4rem;
-  background: ${(props) => props.theme.accent};
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: ${(props) => props.theme.boxShadow};
   color: ${(props) => props.theme.text};
   position: relative;
 
-  h2 {
+  h1 {
+    padding-top: 0;
+    font-weight: 700;
+    font-size: 5rem;
     margin-top: 0;
-    font-weight: 300;
-    font-size: 2.2rem;
   }
 
   .mobileDivider {
@@ -36,10 +35,10 @@ const StyledImageGrid = styled.div`
   .info {
     text-align: left;
     padding-right: 3rem;
+    align-self: center;
 
-    p,
-    ul {
-      font-size: 1.65rem;
+    p {
+      line-height: 2.5rem;
     }
   }
 

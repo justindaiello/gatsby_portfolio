@@ -3,22 +3,16 @@ import React from 'react';
 import AnimatedLink from '../AnimatedLink';
 import BuiltWith from './components/BuiltWith';
 import ScreenShots from './components/ScreenShots';
-import { ContentContainer, StyledLink } from './LinusStyles';
+import Intro from './components/Intro';
+import { ContentContainer } from './LinusStyles';
 
 function LinusContent() {
+  const builtWithRef = React.useRef(null);
   return (
     <ContentContainer>
       <AnimatedLink to="/" text="Home" className="homeLink" />
-      <h1>Linus App</h1>
-      <StyledLink
-        variant="blue"
-        href="https://app.getlinus.io"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Visit Live Site
-      </StyledLink>
-      <BuiltWith />
+      <Intro builtWithRef={builtWithRef} />
+      <BuiltWith builtWithRef={builtWithRef} />
       <ScreenShots />
     </ContentContainer>
   );

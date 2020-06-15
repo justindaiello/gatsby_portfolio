@@ -15,3 +15,12 @@ export function handleUnderline(variant) {
     }
   }
 }
+
+//handle smooth scroll to a ref
+export function handleScrollDown(ref) {
+  ref.current.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+    inline: 'nearest',
+  });
+}

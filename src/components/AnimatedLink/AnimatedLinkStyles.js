@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import TransitionLink from 'gatsby-plugin-transition-link';
-import { handleUnderline } from '../../functions/functions';
+import { handleUnderline } from '../../utils/functions';
 
 export const StyledLink = styled(TransitionLink)`
   text-decoration: none;
