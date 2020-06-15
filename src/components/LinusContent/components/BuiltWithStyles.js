@@ -149,6 +149,8 @@ const StyledImageGrid = styled.div`
     max-width: 350px;
 
     .info {
+      margin: 2rem auto 0;
+
       p {
         text-align: left;
       }

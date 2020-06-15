@@ -81,7 +81,8 @@ const StyledIntroContainer = styled.div`
     .left {
       text-align: center;
 
-      p {
+      p,
+      h2 {
         text-align: left;
       }
     }
