@@ -2,6 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import KeyFeatures from './KeyFeatures';
 import { StyledImgContainer } from './ScreenShotsStyles';
 
 function ScreenShots() {
@@ -10,17 +11,17 @@ function ScreenShots() {
       chartImage: file(relativePath: { eq: "Chart.png" }) {
         ...fluidImage
       }
-      chartImageMobile: file(relativePath: { eq: "MobChart4x.png" }) {
-        ...fluidImageMobile
-      }
       activityImage: file(relativePath: { eq: "Activity.png" }) {
         ...fluidImage
       }
-      activityImageMobile: file(relativePath: { eq: "MobActivity4x.png" }) {
-        ...fluidImageMobile
-      }
       settingsImage: file(relativePath: { eq: "Settings.png" }) {
         ...fluidImage
+      }
+      chartImageMobile: file(relativePath: { eq: "MobChart4x.png" }) {
+        ...fluidImageMobile
+      }
+      activityImageMobile: file(relativePath: { eq: "MobActivity4x.png" }) {
+        ...fluidImageMobile
       }
       settingsImageMobile: file(relativePath: { eq: "MobSettings4x.png" }) {
         ...fluidImageMobile
@@ -36,21 +37,22 @@ function ScreenShots() {
         loading="eager"
       />
       <Img
-        fluid={imgData.activityImage.childImageSharp.fluid}
-        className="appImage"
-      />
-      <Img
-        fluid={imgData.settingsImage.childImageSharp.fluid}
-        className="appImage"
-      />
-      <Img
         fluid={imgData.chartImageMobile.childImageSharp.fluid}
         className="appImageMobile"
         loading="eager"
       />
+      <KeyFeatures />
+      <Img
+        fluid={imgData.activityImage.childImageSharp.fluid}
+        className="appImage"
+      />
       <Img
         fluid={imgData.activityImageMobile.childImageSharp.fluid}
         className="appImageMobile"
+      />
+      <Img
+        fluid={imgData.settingsImage.childImageSharp.fluid}
+        className="appImage"
       />
       <Img
         fluid={imgData.settingsImageMobile.childImageSharp.fluid}
