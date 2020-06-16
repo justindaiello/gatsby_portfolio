@@ -11,14 +11,14 @@ const StyledMain = styled.main`
 
 const StyledImg = styled.img`
   position: fixed;
-  bottom: -235px;
-  left: -300px;
+  bottom: -365px;
+  left: -320px;
   z-index: 0;
-  transform: rotate(10deg);
 
   @media (max-width: 1300px) {
     bottom: -445px;
     left: -500px;
+    transform: rotate(10deg);
   }
 `;
 
