@@ -1,24 +1,24 @@
 import React from 'react';
 
-import { useImmer } from '../../utils/hooks';
-import { StyledChartWell } from './ChartStyles';
 import {
   formatCurrency,
   calculateWithDeposit,
   calculateWithHighYieldRate,
 } from '../../utils/functions';
-import CurrencyInput from '../CurrencyInput';
-import DepositChartUI from './components/DepositChartUI';
-import DepositChartFooter from './components/DepositChartFooter';
+import ChartUI from './components/ChartUI';
+import { useImmer } from '../../utils/hooks';
+import { StyledChartWell } from './ChartStyles';
+import ChartForm from './components/ChartForm';
+import ChartFooter from './components/ChartFooter';
 
 const liveBalance = 0;
 const NUM_OF_YEARS = 30;
 const depositFrequency = 'One-time';
-const currentRate = 400;
 
 function Chart() {
   let date = new Date().getFullYear();
   const [amount, setAmount] = React.useState('$500.00');
+  const [currentRate, setCurrentRate] = React.useState(400);
   const [currentValue, setCurrentValue] = useImmer({
     currentDeposit: null,
     currentHighYield: null,
@@ -70,7 +70,7 @@ function Chart() {
             ),
           );
         });
-  }, [amount, setValues]);
+  }, [amount, setValues, currentRate]);
 
   function parseDepositFrequency(depositFrequency) {
     switch (depositFrequency) {
@@ -176,30 +176,31 @@ function Chart() {
     setAmount(e.target.value);
   }
 
+  function handleRateChange(e) {
+    setCurrentRate(e.name);
+  }
+
   return (
     <StyledChartWell>
       <h1>Deposit Chart</h1>
       <div className="container">
-        <DepositChartUI
+        <ChartUI
+          amount={amount}
+          resetValues={resetValues}
+          currentValue={currentValue}
           depositData={depositData()}
           highYieldData={highYieldData()}
-          currentValue={currentValue}
+          zeroDataMessage={zeroDataMessage}
           handleDepositMouseOver={handleDepositMouseOver}
           handleHighYieldMouseOver={handleHighYieldMouseOver}
-          resetValues={resetValues}
-          amount={amount}
-          zeroDataMessage={zeroDataMessage}
         />
-        <DepositChartFooter values={values} />
-        <div className="inputs">
-          <CurrencyInput
-            name="amount"
-            value={amount}
-            onChange={handleAmount}
-            label="Amount"
-            placeholder="Enter an amount"
-          />
-        </div>
+        <ChartFooter values={values} />
+        <ChartForm
+          amount={amount}
+          currentRate={currentRate}
+          handleAmount={handleAmount}
+          handleRateChange={handleRateChange}
+        />
       </div>
     </StyledChartWell>
   );

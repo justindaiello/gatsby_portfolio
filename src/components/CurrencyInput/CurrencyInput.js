@@ -4,21 +4,11 @@ import PropTypes from 'prop-types';
 import StyledNumberInput from './CurrencyInputStyles';
 
 const propTypes = {
-  type: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
-  secondary: PropTypes.bool,
-  label: PropTypes.string,
 };
 
-function CurrencyInput({
-  name,
-  placeholder,
-  errorMessage,
-  label,
-  secondary,
-  ...props
-}) {
+function CurrencyInput({ name, placeholder, ...props }) {
   return (
     <StyledNumberInput
       id={name}

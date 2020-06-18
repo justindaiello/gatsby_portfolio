@@ -25,11 +25,6 @@ export function handleScrollDown(ref) {
   });
 }
 
-export function calculateWithCurrentContribs(balance, rate, years) {
-  let finalAmount = balance * (1 + parseRate(rate)) ** years;
-  return finalAmount;
-}
-
 export function calculateWithDeposit(amount, balance, rate, years, frequency) {
   if (!amount) return null;
   let totalAmount =

@@ -14,18 +14,13 @@ const StyledChartWell = styled.div`
   .container {
     background: #fff;
     border-radius: 16px;
-    padding: 6rem;
+    padding: 4rem;
     margin-bottom: 6rem;
     max-width: 800px;
     width: 100%;
     display: flex;
     flex-direction: column;
     box-shadow: ${(props) => props.theme.boxShadow};
-  }
-
-  .inputs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
@@ -41,13 +36,13 @@ const StyledChartContainer = styled.div`
   }
 
   .toolTipYear {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: #333;
     opacity: 0.68;
     margin: 0;
     position: absolute;
     right: 12px;
-    top: -3px;
+    top: -8px;
   }
 
   .toolTip {
@@ -95,11 +90,10 @@ const StyledChartFooter = styled.div`
 
   .infoContainer {
     margin: 2.5rem 0;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
     .withDeposit,
-    .currentContributions,
     .traditionalSavings {
       display: flex;
       flex-wrap: wrap;
@@ -133,4 +127,15 @@ const StyledChartFooter = styled.div`
   }
 `;
 
-export { StyledChartWell, StyledChartContainer, StyledChartFooter };
+const StyledFormContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+`;
+
+export {
+  StyledChartWell,
+  StyledChartContainer,
+  StyledChartFooter,
+  StyledFormContainer,
+};

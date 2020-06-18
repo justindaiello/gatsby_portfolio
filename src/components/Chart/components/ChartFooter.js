@@ -3,7 +3,7 @@ import { object } from 'prop-types';
 
 import { StyledChartFooter } from '../ChartStyles';
 
-function DepositChartDetails({ values }) {
+function ChartDetails({ values }) {
   return (
     <StyledChartFooter>
       <div className="xAxis">
@@ -22,17 +22,15 @@ function DepositChartDetails({ values }) {
           <div />
           Vs. Traditional Savings
           <div className="break" />
-          <h5 As="h5" size="small">
-            {values.highYieldValues}
-          </h5>
+          <h5>{values.highYieldValues}</h5>
         </div>
       </div>
     </StyledChartFooter>
   );
 }
 
-DepositChartDetails.propTypes = {
+ChartDetails.propTypes = {
   values: object,
 };
 
-export default DepositChartDetails;
+export default ChartDetails;

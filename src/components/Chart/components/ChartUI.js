@@ -24,7 +24,7 @@ const propTypes = {
   zeroDataMessage: bool,
 };
 
-function DepositChartUI({
+function ChartUI({
   depositData,
   highYieldData,
   currentValue,
@@ -96,6 +96,6 @@ function DepositChartUI({
   );
 }
 
-DepositChartUI.propTypes = propTypes;
+ChartUI.propTypes = propTypes;
 
-export default DepositChartUI;
+export default ChartUI;
