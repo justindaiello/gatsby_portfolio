@@ -32,8 +32,11 @@ const StyledChartWell = styled.div`
     }
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 1280px) {
     margin-top: 5rem;
+  }
+
+  @media (max-width: 750px) {
     height: auto;
 
     .container > h2 {
