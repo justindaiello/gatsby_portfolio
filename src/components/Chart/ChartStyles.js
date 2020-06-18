@@ -28,6 +28,7 @@ const StyledChartWell = styled.div`
       position: absolute;
       margin: 0;
       font-size: 2.5rem;
+      top: 2rem;
     }
   }
 
@@ -38,6 +39,7 @@ const StyledChartWell = styled.div`
     .container > h2 {
       position: relative;
       margin-bottom: 1rem;
+      top: 0;
     }
   }
 `;
