@@ -44,14 +44,14 @@ function Chart() {
               amount,
               liveBalance,
               currentRate,
-              NUM_OF_YEARS,
+              0,
               parseDepositFrequency(depositFrequency),
             ),
           );
           draft.highYieldValues = formatCurrency(
             calculateWithHighYieldRate(
               liveBalance,
-              NUM_OF_YEARS,
+              0,
               amount,
               parseDepositFrequency(depositFrequency),
             ),
@@ -63,14 +63,14 @@ function Chart() {
               0,
               liveBalance,
               currentRate,
-              NUM_OF_YEARS,
+              0,
               parseDepositFrequency(depositFrequency),
             ),
           );
           draft.highYieldValues = formatCurrency(
             calculateWithHighYieldRate(
               liveBalance,
-              NUM_OF_YEARS,
+              0,
               0,
               parseDepositFrequency(depositFrequency),
             ),
@@ -169,14 +169,14 @@ function Chart() {
           amount,
           liveBalance,
           currentRate,
-          NUM_OF_YEARS,
+          0,
           parseDepositFrequency(depositFrequency),
         ),
       );
       draft.highYieldValues = formatCurrency(
         calculateWithHighYieldRate(
           liveBalance,
-          NUM_OF_YEARS,
+          0,
           amount,
           parseDepositFrequency(depositFrequency),
         ),
