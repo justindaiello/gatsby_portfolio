@@ -22,7 +22,7 @@ const NUM_OF_YEARS = 30;
 
 function Chart() {
   const [amount, setAmount] = React.useState('$500.00');
-  const [currentRate, setCurrentRate] = React.useState(400);
+  const [currentRate, setCurrentRate] = React.useState(300);
   const [currentValue, setCurrentValue] = useImmer({
     currentDeposit: null,
     currentHighYield: null,

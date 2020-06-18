@@ -80,7 +80,7 @@ const StyledChartContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 8rem;
+    margin: 4rem 0;
 
     img {
       width: 160px;
@@ -151,7 +151,7 @@ const StyledChartFooter = styled.div`
     }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 600px) {
     .infoContainer {
       grid-template-columns: 1fr;
 
@@ -173,7 +173,7 @@ const StyledFormContainer = styled.div`
     color: #111219;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 600px) {
     grid-template-columns: 1fr;
     grid-gap: 2rem;
   }
