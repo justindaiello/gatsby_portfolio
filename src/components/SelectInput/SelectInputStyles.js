@@ -20,7 +20,7 @@ export const primarySelect = {
       color: '#fff',
     },
     backgroundColor: state.isSelected && '#fff',
-    color: state.isSelected && '#333',
+    color: state.isSelected && '#111219',
   }),
   indicatorSeparator: () => ({ display: 'none' }),
 };

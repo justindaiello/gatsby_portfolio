@@ -11,12 +11,16 @@ import { StyledChartWell } from './ChartStyles';
 import ChartForm from './components/ChartForm';
 import ChartFooter from './components/ChartFooter';
 
+//this is normally fetched from the BE and put into the redux store
 const liveBalance = 0;
-const NUM_OF_YEARS = 30;
+
+//this normally comes from a drop down select for recurring deposit frequency
 const depositFrequency = 'One-time';
 
+//hard coded value for the length period of the chart
+const NUM_OF_YEARS = 30;
+
 function Chart() {
-  let date = new Date().getFullYear();
   const [amount, setAmount] = React.useState('$500.00');
   const [currentRate, setCurrentRate] = React.useState(400);
   const [currentValue, setCurrentValue] = useImmer({
@@ -27,9 +31,11 @@ function Chart() {
     depositValues: null,
     highYieldValues: null,
   });
+  let date = new Date().getFullYear();
   let zeroDataMessage =
     (!amount && liveBalance === 0) || (amount === '$0.00' && liveBalance === 0);
 
+  //run real time calculations on the amount input with a value vs without a value and pipe the values into state
   React.useEffect(() => {
     amount
       ? setValues((draft) => {
@@ -72,6 +78,7 @@ function Chart() {
         });
   }, [amount, setValues, currentRate]);
 
+  //this would take the strings from the recurring deposit dropdown (not being used in this example) and parse them into numbers
   function parseDepositFrequency(depositFrequency) {
     switch (depositFrequency) {
       case 'One-time': {
@@ -92,6 +99,7 @@ function Chart() {
     }
   }
 
+  //calculate deposit date for the chart
   function depositData() {
     let data = [];
     for (let i = 0; i <= NUM_OF_YEARS; i++) {
@@ -110,6 +118,7 @@ function Chart() {
     return data;
   }
 
+  //calculate high yield account data for the chart
   function highYieldData() {
     let data = [];
     for (let i = 0; i <= NUM_OF_YEARS; i++) {
@@ -126,6 +135,7 @@ function Chart() {
     return data;
   }
 
+  //set the yearly values for the deposit chart hover
   function handleDepositMouseOver(data) {
     setCurrentValue((draft) => {
       draft.currentDeposit = data;
@@ -136,6 +146,7 @@ function Chart() {
       });
   }
 
+  //set the yearly values for the highyield chart hover
   function handleHighYieldMouseOver(data) {
     setCurrentValue((draft) => {
       draft.currentHighYield = data;
@@ -146,6 +157,7 @@ function Chart() {
       });
   }
 
+  //reset all values based on the input value when the user leaves the chart area
   function resetValues() {
     setCurrentValue((draft) => {
       draft.currentDeposit = null;
@@ -172,18 +184,21 @@ function Chart() {
     });
   }
 
+  //handle the amount input state
   function handleAmount(e) {
     setAmount(e.target.value);
   }
 
+  //handle the select input state
   function handleRateChange(e) {
     setCurrentRate(e.name);
   }
 
   return (
     <StyledChartWell>
-      <h1>Deposit Chart</h1>
+      <h1>APY Chart</h1>
       <div className="container">
+        <h2>Predicted Growth</h2>
         <ChartUI
           amount={amount}
           resetValues={resetValues}
@@ -194,7 +209,7 @@ function Chart() {
           handleDepositMouseOver={handleDepositMouseOver}
           handleHighYieldMouseOver={handleHighYieldMouseOver}
         />
-        <ChartFooter values={values} />
+        <ChartFooter values={values} currentRate={currentRate} />
         <ChartForm
           amount={amount}
           currentRate={currentRate}

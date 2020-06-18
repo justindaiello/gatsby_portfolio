@@ -6,6 +6,7 @@ const StyledChartWell = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin: 0 2rem;
 
   h1 {
     color: ${(props) => props.theme.text};
@@ -21,6 +22,26 @@ const StyledChartWell = styled.div`
     display: flex;
     flex-direction: column;
     box-shadow: ${(props) => props.theme.boxShadow};
+    position: relative;
+
+    h2 {
+      position: absolute;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 750px) {
+    margin-top: 5rem;
+
+    .container > h2 {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 450px) {
+    margin-top: 10rem;
   }
 `;
 
@@ -29,7 +50,7 @@ const StyledChartContainer = styled.div`
 
   .toolTip,
   .toolTipShort {
-    border-left: 2px solid #333;
+    border-left: 2px solid #111219;
     padding-left: 0.25rem;
     position: relative;
     transition: all 0.2s;
@@ -37,8 +58,7 @@ const StyledChartContainer = styled.div`
 
   .toolTipYear {
     font-size: 1.2rem;
-    color: #333;
-    opacity: 0.68;
+    color: #111219;
     margin: 0;
     position: absolute;
     right: 12px;
@@ -68,6 +88,12 @@ const StyledChartContainer = styled.div`
       opacity: 0.15;
     }
   }
+
+  @media (max-width: 750px) {
+    .toolTipShort {
+      height: 310px;
+    }
+  }
 `;
 
 const StyledChartFooter = styled.div`
@@ -77,8 +103,7 @@ const StyledChartFooter = styled.div`
     justify-content: space-between;
 
     span {
-      color: #333;
-      opacity: 0.68;
+      color: #111219;
       font-size: 1.6rem;
     }
   }
@@ -99,7 +124,7 @@ const StyledChartFooter = styled.div`
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      color: rgba(51, 51, 51, 0.68);
+      color: #111219;
       font-size: 1.6rem;
 
       div:nth-of-type(1) {
@@ -110,7 +135,7 @@ const StyledChartFooter = styled.div`
       }
 
       h5 {
-        color: #333;
+        color: #111219;
         margin: 0 0.5rem 0;
         font-size: 2.5rem;
         font-weight: 700;
@@ -125,12 +150,33 @@ const StyledChartFooter = styled.div`
       background: ${(props) => props.theme.accent};
     }
   }
+
+  @media (max-width: 550px) {
+    .infoContainer {
+      grid-template-columns: 1fr;
+
+      .withDeposit,
+      .traditionalSavings {
+        justify-content: flex-start;
+      }
+    }
+  }
 `;
 
 const StyledFormContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
+
+  .formGroup > label {
+    font-size: 1.6rem;
+    color: #111219;
+  }
+
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
 `;
 
 export {

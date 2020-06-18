@@ -20,6 +20,7 @@ function CurrencyInput({ name, placeholder, ...props }) {
       allowNegative={false}
       allowLeadingZeros={false}
       fixedDecimalScale
+      thousandSeparator
       {...props}
     />
   );

@@ -8,8 +8,8 @@ import {
   GradientDefs,
 } from 'react-vis';
 
-import { StyledChartContainer } from '../ChartStyles';
 import ZeroDataMessage from './ZeroDataMessage';
+import { StyledChartContainer } from '../ChartStyles';
 import '../../../../node_modules/react-vis/dist/style.css';
 
 let FlexibleXYPlot = makeWidthFlexible(XYPlot);
@@ -33,6 +33,7 @@ function ChartUI({
   resetValues,
   zeroDataMessage,
 }) {
+  //display empty chart image if the amount input has no data
   if (zeroDataMessage) {
     return (
       <StyledChartContainer>
@@ -43,6 +44,7 @@ function ChartUI({
 
   return (
     <StyledChartContainer>
+      {console.log(currentValue.currentDeposit)}
       <div>
         <FlexibleXYPlot
           height={300}
@@ -66,8 +68,7 @@ function ChartUI({
             >
               <div
                 className={
-                  !currentValue.currentDeposit.z &&
-                  currentValue.currentDeposit.z < 2030
+                  currentValue.currentDeposit.z < 2032
                     ? 'toolTipShort'
                     : 'toolTip'
                 }
