@@ -6,7 +6,7 @@ import Chart from '../components/Chart';
 function ChartPage() {
   return (
     <div>
-      <SEO title="Deposit Chart" />
+      <SEO title="Chart" />
       <Chart />
     </div>
   );
