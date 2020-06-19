@@ -17,7 +17,7 @@ const liveBalance = 0;
 //this normally comes from a drop down select for recurring deposit frequency
 const depositFrequency = 'One-time';
 
-//hard coded value for the length period of the chart
+//hard coded value for the number of years displayed on the chart
 const NUM_OF_YEARS = 30;
 
 function Chart() {
@@ -35,7 +35,7 @@ function Chart() {
   let zeroDataMessage =
     (!amount && liveBalance === 0) || (amount === '$0.00' && liveBalance === 0);
 
-  //run real time calculations on the amount input with a value vs without a value and pipe the values into state
+  //run real time calculations on the amount and rate inputs with a value vs without a value and pipe the values into state
   React.useEffect(() => {
     amount
       ? setValues((draft) => {
