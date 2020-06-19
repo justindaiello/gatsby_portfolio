@@ -35,7 +35,7 @@ function Chart() {
   let zeroDataMessage =
     (!amount && liveBalance === 0) || (amount === '$0.00' && liveBalance === 0);
 
-  //run real time calculations on the amount input with a value vs without a value and pipe the values into state
+  //run real time calculations on the amount and rate inputs with a value vs without a value and pipe the values into state
   React.useEffect(() => {
     amount
       ? setValues((draft) => {
