@@ -44,7 +44,6 @@ function ChartUI({
 
   return (
     <StyledChartContainer>
-      {console.log(currentValue.currentDeposit)}
       <div>
         <FlexibleXYPlot
           height={300}

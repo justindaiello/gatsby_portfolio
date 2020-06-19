@@ -17,7 +17,7 @@ const liveBalance = 0;
 //this normally comes from a drop down select for recurring deposit frequency
 const depositFrequency = 'One-time';
 
-//hard coded value for the length period of the chart
+//hard coded value for the number of years displayed on the chart
 const NUM_OF_YEARS = 30;
 
 function Chart() {
