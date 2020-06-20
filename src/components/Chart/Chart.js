@@ -6,6 +6,7 @@ import {
   calculateWithHighYieldRate,
 } from '../../utils/functions';
 import LinkButton from '../LinkButton';
+import AnimatedLink from '../AnimatedLink';
 import ChartUI from './components/ChartUI';
 import { useImmer } from '../../utils/hooks';
 import { StyledChartWell } from './ChartStyles';
@@ -197,7 +198,12 @@ function Chart() {
 
   return (
     <StyledChartWell>
+      <AnimatedLink to="/" text="Home" className="homeLink" />
       <h1>APY Chart</h1>
+      <h2>
+        Hover over the chart to compare high interest savings rates vs.
+        traditional savings rates.
+      </h2>
       <div className="container">
         <h2>Predicted Growth</h2>
         <ChartUI
@@ -218,9 +224,16 @@ function Chart() {
           handleRateChange={handleRateChange}
         />
       </div>
-      <LinkButton href="#" text="View Source Code" className="chartButton" />
+      <LinkButton
+        href={chartLink}
+        text="View Source Code"
+        className="chartButton"
+      />
     </StyledChartWell>
   );
 }
+
+const chartLink =
+  'https://github.com/justindaiello/gatsby_portfolio/tree/master/src/components/Chart';
 
 export default Chart;
