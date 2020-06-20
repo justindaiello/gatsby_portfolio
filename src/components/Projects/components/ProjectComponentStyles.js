@@ -86,6 +86,23 @@ const PortfolioDiv = styled.div`
   }
 `;
 
+const DataVisDiv = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 200px;
+
+  .purple {
+    background: #8581a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
 const ProjectLink = styled.a`
   text-decoration: none;
   color: ${(props) => props.theme.text};
@@ -145,10 +162,11 @@ const ProjectLink = styled.a`
 `;
 
 export {
+  DataVisDiv,
   LinusAppDiv,
-  LinusMarketingDiv,
-  GoAdventureDiv,
   ProjectLink,
   AprToApyDiv,
   PortfolioDiv,
+  GoAdventureDiv,
+  LinusMarketingDiv,
 };
