@@ -3,7 +3,8 @@ import Img from 'gatsby-image';
 import { object } from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { StyledIntroContainer, StyledLinkButton } from './IntroStyles';
+import LinkButton from '../../LinkButton';
+import { StyledIntroContainer } from './IntroStyles';
 import { handleScrollDown } from '../../../utils/functions';
 
 function Intro({ builtWithRef }) {
@@ -29,13 +30,10 @@ function Intro({ builtWithRef }) {
           delivered interactive data visualizations, payment integrations,
           two-factor authentication, and complex user interfaces.
         </p>
-        <StyledLinkButton
+        <LinkButton
           href="https://app.getlinus.io/open"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit Live Site
-        </StyledLinkButton>
+          text="Visit Live Site"
+        />
       </div>
       <Img
         fixed={img.mobileChart.childImageSharp.fixed}

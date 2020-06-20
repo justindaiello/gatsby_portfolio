@@ -6,10 +6,28 @@ const StyledChartWell = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 0 2rem;
+  margin: 2rem;
 
   h1 {
     color: ${(props) => props.theme.text};
+    margin: 0;
+  }
+
+  > h2 {
+    color: ${(props) => props.theme.text};
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+  }
+
+  .homeLink {
+    position: absolute;
+    font-size: 1.5rem;
+    left: 20px;
+    top: 15px;
+  }
+
+  .chartButton {
+    margin-bottom: 4rem;
   }
 
   .container {
@@ -38,6 +56,10 @@ const StyledChartWell = styled.div`
 
   @media (max-width: 750px) {
     height: auto;
+
+    > h2 {
+      text-align: center;
+    }
 
     .container > h2 {
       position: relative;
