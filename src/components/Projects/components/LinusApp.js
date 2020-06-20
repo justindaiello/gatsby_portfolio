@@ -1,6 +1,6 @@
 import React from 'react';
-import { LinusAppDiv } from './ProjectComponentStyles';
 
+import { LinusAppDiv } from './ProjectComponentStyles';
 import AnimatedLink from '../../AnimatedLink';
 
 function LinusApp() {

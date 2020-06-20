@@ -7,6 +7,7 @@ import LinusMarketing from './components/LinusMarketing';
 import GoAdventure from './components/GoAdventure';
 import AprToApy from './components/AprToApy';
 import Portfolio from './components/Portfolio';
+import DataVis from './components/DataVis';
 
 function Projects({ projectRef }) {
   return (
@@ -16,6 +17,7 @@ function Projects({ projectRef }) {
       <GoAdventure />
       <AprToApy />
       <Portfolio />
+      <DataVis />
     </StyledContainer>
   );
 }
