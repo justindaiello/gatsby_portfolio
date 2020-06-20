@@ -12,6 +12,10 @@ const StyledChartWell = styled.div`
     color: ${(props) => props.theme.text};
   }
 
+  .chartButton {
+    margin-bottom: 4rem;
+  }
+
   .container {
     background: #fff;
     border-radius: 16px;

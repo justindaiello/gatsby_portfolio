@@ -5,6 +5,7 @@ import {
   calculateWithDeposit,
   calculateWithHighYieldRate,
 } from '../../utils/functions';
+import LinkButton from '../LinkButton';
 import ChartUI from './components/ChartUI';
 import { useImmer } from '../../utils/hooks';
 import { StyledChartWell } from './ChartStyles';
@@ -217,6 +218,7 @@ function Chart() {
           handleRateChange={handleRateChange}
         />
       </div>
+      <LinkButton href="#" text="View Source Code" className="chartButton" />
     </StyledChartWell>
   );
 }
