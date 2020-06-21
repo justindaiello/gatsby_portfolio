@@ -66,6 +66,10 @@ const StyledChartWell = styled.div`
       margin-bottom: 1rem;
       top: 0;
     }
+
+    .homeLink {
+      left: 0;
+    }
   }
 `;
 
