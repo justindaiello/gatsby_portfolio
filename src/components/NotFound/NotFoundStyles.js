@@ -13,6 +13,11 @@ const NotFoundContainer = styled.div`
     top: 30%;
     padding: 0 2rem;
 
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
     .homeButton {
       display: inline-block;
     }
