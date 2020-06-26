@@ -88,7 +88,7 @@ const PortfolioDiv = styled.div`
 
 const DataVisDiv = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 200px;
 
   .purple {
