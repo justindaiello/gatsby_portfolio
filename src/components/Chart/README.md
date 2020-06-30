@@ -6,6 +6,6 @@ The idea behind the chart is to show how much higher the potential earnings are 
 
 The chart was built with:
 - React/Gatsby
-- ReactVis (D3 under the hood)
+- ReactVis
 - Styled Components
 - Immer
