@@ -12,7 +12,7 @@ function GoAdventure() {
           rel="noopener noreferrer"
           variant="yellow"
         >
-          Go Adventure Store
+          React/GraphQL Project
         </ProjectLink>
       </div>
       <div className="matchBody" />
