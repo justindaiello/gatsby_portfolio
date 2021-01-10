@@ -51,7 +51,7 @@ function Hero() {
             <p>
               Hi! I'm a Software Engineer residing in Asheville, NC. I love to
               create pixel-perfect user interfaces leveraging JavaScript, React,
-              TypeScript and GraphQL.
+              TypeScript, GraphQL, and Rails.
             </p>
             <StyledList>
               <li>
@@ -96,4 +96,4 @@ function Hero() {
 export default Hero;
 
 const resumeLink =
-  'https://res.cloudinary.com/reactstore/image/upload/v1601502854/resume/aiello_resume_azqcph.pdf';
+  'https://res.cloudinary.com/reactstore/image/upload/v1610315276/resume/aiello_resume_cfqgyy.pdf';
