@@ -1,5 +1,5 @@
 import React from 'react';
-import { object } from 'prop-types';
+import { object, array, oneOfType } from 'prop-types';
 import { Spring, animated } from 'react-spring/renderprops';
 import { TransitionState } from 'gatsby-plugin-transition-link';
 
@@ -15,6 +15,7 @@ function TransitionSpring({ children }) {
             native
             to={{
               opacity: mount ? 1 : 0,
+              top: 0,
             }}
             config={{
               duration: seconds * 650,
@@ -29,7 +30,7 @@ function TransitionSpring({ children }) {
 }
 
 TransitionSpring.propTypes = {
-  children: object,
+  children: oneOfType([object, array]),
 };
 
 export default TransitionSpring;

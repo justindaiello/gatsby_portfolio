@@ -23,9 +23,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Add any options here
-      },
+      options: {},
     },
     {
       resolve: 'gatsby-plugin-sharp',
@@ -42,19 +40,15 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-favicon',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        logo: './src/images/favicon.png',
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          yandex: false,
-          windows: false,
-        },
+        name: `Justin Aiello`,
+        short_name: `Justin Aiello`,
+        start_url: `/`,
+        background_color: `#111219`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
       },
     },
   ],
