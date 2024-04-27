@@ -96,4 +96,4 @@ function Hero() {
 export default Hero;
 
 const resumeLink =
-  'https://res.cloudinary.com/reactstore/image/upload/v1714160149/resume_no_phone_tefwao.pdf';
+  'https://res.cloudinary.com/reactstore/image/upload/v1714237329/justin_aiello_resume_no_phone_bplqis.pdf';
